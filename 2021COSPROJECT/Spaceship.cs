@@ -1,10 +1,11 @@
-﻿using System;
+﻿using System.Drawing.Drawing2D;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-using System.Drawing.Drawing2D;
+
 
 
 namespace _2021COSPROJECT
@@ -17,11 +18,16 @@ namespace _2021COSPROJECT
         public Image spaceship;//variable for the planet's image
         public int rotationAngle;
         public Matrix matrix;
+        Point centre;
         public Rectangle spaceRec;//variable for a rectangle to place our image in
+        
+        
+        
 
         //Create a constructor (initialises the values of the fields)
         public Spaceship()
         {
+
             x = 10;
             y = 360;
             width = 40;
@@ -29,6 +35,7 @@ namespace _2021COSPROJECT
             rotationAngle = 0;
             spaceship = Image.FromFile("alien1.png");
             spaceRec = new Rectangle(x, y, width, height);
+            
         }
         //methods
         public void drawSpaceship(Graphics g)

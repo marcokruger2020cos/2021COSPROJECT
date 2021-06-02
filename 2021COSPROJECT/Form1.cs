@@ -48,9 +48,7 @@ namespace _2021COSPROJECT
             if (turnLeft)
                 spaceship.rotationAngle -= 5;
         }
- //Invalidate();
-
-        }
+ 
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -65,5 +63,8 @@ namespace _2021COSPROJECT
             if (e.KeyData == Keys.Right) { turnRight = false; }
 
         }
+       
+
     }
 }
+
