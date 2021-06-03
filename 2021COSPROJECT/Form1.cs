@@ -15,6 +15,9 @@ namespace _2021COSPROJECT
         Graphics g; //declare a graphics object called g so we can draw on the Form
         Spaceship spaceship = new Spaceship(); //create an instance of the Spaceship Class called spaceship
         bool turnLeft, turnRight;
+        //declare a list  missiles from the Missile class
+        List<Missile> missiles = new List<Missile>();
+
         public Form1()
         {
             InitializeComponent();
@@ -31,6 +34,12 @@ namespace _2021COSPROJECT
             g = e.Graphics;
             //Draw the spaceship
             spaceship.drawSpaceship(g);
+            foreach (Missile m in missiles)
+            {
+                m.drawMissile(g);
+                m.moveMissile(g);
+            }
+
 
         }
 
@@ -47,14 +56,31 @@ namespace _2021COSPROJECT
             }
             if (turnLeft)
                 spaceship.rotationAngle -= 5;
+            Invalidate();
         }
- 
+        
+
+
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { turnLeft = true; }
             if (e.KeyData == Keys.Right) { turnRight = true; }
 
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                missiles.Add(new Missile(spaceship.spaceRec, spaceship.rotationAngle));
+            }
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
