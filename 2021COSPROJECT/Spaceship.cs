@@ -13,7 +13,7 @@ namespace _2021COSPROJECT
     class Spaceship
     {
         // declare fields to use in the class
-
+        //Just rename the classes as the example was used
         public int x, y, width, height;//variables for the rectangle
         public Image spaceship;//variable for the planet's image
         public int rotationAngle;
@@ -33,7 +33,7 @@ namespace _2021COSPROJECT
             width = 40;
             height = 40;
             rotationAngle = 0;
-            spaceship = Image.FromFile("alien1.png");
+            spaceship = Image.FromFile("Character1.png");
             spaceRec = new Rectangle(x, y, width, height);
             
         }
