@@ -109,7 +109,7 @@ namespace _2021COSPROJECT
             // Explosive1
             // 
             this.Explosive1.BackColor = System.Drawing.Color.DarkRed;
-            this.Explosive1.Location = new System.Drawing.Point(875, 79);
+            this.Explosive1.Location = new System.Drawing.Point(759, 347);
             this.Explosive1.Name = "Explosive1";
             this.Explosive1.Size = new System.Drawing.Size(22, 33);
             this.Explosive1.TabIndex = 1;

@@ -55,7 +55,10 @@ namespace _2021COSPROJECT
                 spaceship.rotationAngle += 5;
             }
             if (turnLeft)
+            {
                 spaceship.rotationAngle -= 5;
+            }
+               
             Invalidate();
         }
         
@@ -90,12 +93,12 @@ namespace _2021COSPROJECT
 
         private void pauseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          tmrSpaceship.Stop();
+          tmrSpaceship.Stop();//Pause button
         }
 
         private void playToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tmrSpaceship.Start();
+            tmrSpaceship.Start();//Start button
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
