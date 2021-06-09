@@ -38,13 +38,17 @@ namespace _2021COSPROJECT
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Explosive1 = new System.Windows.Forms.PictureBox();
+            this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Explosive1)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrSpaceship
             // 
             this.tmrSpaceship.Enabled = true;
-            this.tmrSpaceship.Interval = 1;
+            this.tmrSpaceship.Interval = 10;
             this.tmrSpaceship.Tick += new System.EventHandler(this.tmrSpaceship_Tick);
             // 
             // menuStrip1
@@ -52,7 +56,9 @@ namespace _2021COSPROJECT
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.aboutToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.helpToolStripMenuItem,
+            this.pauseToolStripMenuItem,
+            this.playToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1232, 24);
@@ -100,12 +106,37 @@ namespace _2021COSPROJECT
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // Explosive1
+            // 
+            this.Explosive1.BackColor = System.Drawing.Color.DarkRed;
+            this.Explosive1.Location = new System.Drawing.Point(875, 79);
+            this.Explosive1.Name = "Explosive1";
+            this.Explosive1.Size = new System.Drawing.Size(22, 33);
+            this.Explosive1.TabIndex = 1;
+            this.Explosive1.TabStop = false;
+            this.Explosive1.Click += new System.EventHandler(this.Explosive1_Click);
+            // 
+            // pauseToolStripMenuItem
+            // 
+            this.pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
+            this.pauseToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.pauseToolStripMenuItem.Text = "Pause";
+            this.pauseToolStripMenuItem.Click += new System.EventHandler(this.pauseToolStripMenuItem_Click);
+            // 
+            // playToolStripMenuItem
+            // 
+            this.playToolStripMenuItem.Name = "playToolStripMenuItem";
+            this.playToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.playToolStripMenuItem.Text = "Play";
+            this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1232, 516);
+            this.Controls.Add(this.Explosive1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.KeyPreview = true;
@@ -120,6 +151,7 @@ namespace _2021COSPROJECT
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Explosive1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +167,9 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.PictureBox Explosive1;
+        private System.Windows.Forms.ToolStripMenuItem pauseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem playToolStripMenuItem;
     }
 }
 

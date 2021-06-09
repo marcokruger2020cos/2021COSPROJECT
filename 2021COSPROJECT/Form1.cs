@@ -83,6 +83,21 @@ namespace _2021COSPROJECT
             System.Windows.Forms.Application.Exit();
         }
 
+        private void Explosive1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Be carefull not to shoot the barels " );
+        }
+
+        private void pauseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          tmrSpaceship.Stop();
+        }
+
+        private void playToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tmrSpaceship.Start();
+        }
+
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { turnLeft = false; }
