@@ -52,12 +52,12 @@ namespace _2021COSPROJECT
             g.DrawImage(missile, missileRec);
 
         }
+
         public void moveMissile(Graphics g)
         {
             x += (int)xSpeed;//cast double to an integer value
             y -= (int)ySpeed;
             missileRec.Location = new Point(x, y);//missiles new location
-
         }
 
     }

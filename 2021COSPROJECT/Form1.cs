@@ -17,6 +17,7 @@ namespace _2021COSPROJECT
         bool turnLeft, turnRight;
         //declare a list  missiles from the Missile class
         List<Missile> missiles = new List<Missile>();
+        List<Planet> planets = new List<Planet>();
 
         public Form1()
         {
