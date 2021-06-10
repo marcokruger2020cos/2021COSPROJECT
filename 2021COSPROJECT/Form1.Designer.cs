@@ -41,6 +41,7 @@ namespace _2021COSPROJECT
             this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Explosive1 = new System.Windows.Forms.PictureBox();
+            this.tmrShoot_tick = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Explosive1)).BeginInit();
             this.SuspendLayout();
@@ -105,6 +106,7 @@ namespace _2021COSPROJECT
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // pauseToolStripMenuItem
             // 
@@ -129,6 +131,11 @@ namespace _2021COSPROJECT
             this.Explosive1.TabIndex = 1;
             this.Explosive1.TabStop = false;
             this.Explosive1.Click += new System.EventHandler(this.Explosive1_Click);
+            // 
+            // tmrShoot_tick
+            // 
+            this.tmrShoot_tick.Enabled = true;
+            this.tmrShoot_tick.Tick += new System.EventHandler(this.tmrShoot_tick_Tick);
             // 
             // Form1
             // 
@@ -170,6 +177,7 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.PictureBox Explosive1;
         private System.Windows.Forms.ToolStripMenuItem pauseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playToolStripMenuItem;
+        private System.Windows.Forms.Timer tmrShoot_tick;
     }
 }
 
