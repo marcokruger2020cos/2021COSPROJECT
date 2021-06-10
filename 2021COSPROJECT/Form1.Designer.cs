@@ -38,9 +38,9 @@ namespace _2021COSPROJECT
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Explosive1 = new System.Windows.Forms.PictureBox();
             this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Explosive1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Explosive1)).BeginInit();
             this.SuspendLayout();
@@ -106,16 +106,6 @@ namespace _2021COSPROJECT
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // Explosive1
-            // 
-            this.Explosive1.BackColor = System.Drawing.Color.DarkRed;
-            this.Explosive1.Location = new System.Drawing.Point(759, 347);
-            this.Explosive1.Name = "Explosive1";
-            this.Explosive1.Size = new System.Drawing.Size(22, 33);
-            this.Explosive1.TabIndex = 1;
-            this.Explosive1.TabStop = false;
-            this.Explosive1.Click += new System.EventHandler(this.Explosive1_Click);
-            // 
             // pauseToolStripMenuItem
             // 
             this.pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
@@ -129,6 +119,16 @@ namespace _2021COSPROJECT
             this.playToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.playToolStripMenuItem.Text = "Play";
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
+            // 
+            // Explosive1
+            // 
+            this.Explosive1.BackColor = System.Drawing.Color.DarkRed;
+            this.Explosive1.Location = new System.Drawing.Point(959, 440);
+            this.Explosive1.Name = "Explosive1";
+            this.Explosive1.Size = new System.Drawing.Size(22, 33);
+            this.Explosive1.TabIndex = 1;
+            this.Explosive1.TabStop = false;
+            this.Explosive1.Click += new System.EventHandler(this.Explosive1_Click);
             // 
             // Form1
             // 

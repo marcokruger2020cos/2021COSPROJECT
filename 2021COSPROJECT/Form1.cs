@@ -106,7 +106,6 @@ namespace _2021COSPROJECT
         {
             if (e.KeyData == Keys.Left) { turnLeft = false; }
             if (e.KeyData == Keys.Right) { turnRight = false; }
-
         }
        
 
