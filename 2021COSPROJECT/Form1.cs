@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace _2021COSPROJECT
 {
@@ -27,6 +28,9 @@ namespace _2021COSPROJECT
                 int displacement = 10 + (i * 70);
                 planets.Add(new Planet(displacement));
             }
+            
+
+
 
 
 
@@ -137,7 +141,15 @@ namespace _2021COSPROJECT
                 }
 
             }
-
+            foreach (Planet p in planets)
+            {
+                p.draw(g);//Draw the planet
+                p.movePlanet(g);//move the planet
+            }
+            foreach (Missile m in missiles)
+            {
+                m.draw(g);
+            }
             this.Invalidate();
           
         }
