@@ -28,12 +28,6 @@ namespace _2021COSPROJECT
                 int displacement = 10 + (i * 70);
                 planets.Add(new Planet(displacement));
             }
-            
-
-
-
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,9 +51,6 @@ namespace _2021COSPROJECT
                 p.draw(g);//Draw the planet
                 p.movePlanet(g);//move the planet
             }
-
-
-
         }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
