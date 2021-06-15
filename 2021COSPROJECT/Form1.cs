@@ -158,6 +158,11 @@ namespace _2021COSPROJECT
 
         }
 
+        private void panel1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+
+        }
+
         private void panel1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { turnLeft = false; }
