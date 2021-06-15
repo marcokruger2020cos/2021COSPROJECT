@@ -75,7 +75,7 @@ namespace _2021COSPROJECT
 
 
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void panel1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { turnLeft = true; }
             if (e.KeyData == Keys.Right) { turnRight = true; }
@@ -116,36 +116,49 @@ namespace _2021COSPROJECT
 
         }
 
-        private void tmrShoot_tick_Tick(object sender, EventArgs e)
+        
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            foreach (Planet p in planets)
+           
+            //get the graphics used to paint on the Form control
+            g = e.Graphics;
+            //Draw the spaceship
+            spaceship.drawSpaceship(g);
+            foreach (Missile m in missiles)
             {
-
-                foreach (Missile m in missiles)
-                {
-                    if (p.PlanetRec.IntersectsWith(m.MissileRec))
-                    {
-                        p.y = -20;// relocate planet to the top of the form
-                        missiles.Remove(m);
-                        break;
-                    }
-                }
-
+                m.drawMissile(g);
+                m.moveMissile(g);
             }
             foreach (Planet p in planets)
             {
                 p.draw(g);//Draw the planet
                 p.movePlanet(g);//move the planet
             }
-            foreach (Missile m in missiles)
-            {
-                m.draw(g);
-            }
-            this.Invalidate();
-          
+
         }
 
-        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            spaceship.moveSpaceship(e.X, e.Y);
+            panel1.Invalidate();
+
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                missiles.Add(new Missile(spaceship.spaceRec, spaceship.rotationAngle));
+            }
+        }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void panel1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left) { turnLeft = false; }
             if (e.KeyData == Keys.Right) { turnRight = false; }

@@ -34,7 +34,7 @@ namespace _2021COSPROJECT
         {
             planetRec = new Rectangle(x, y, width, height);
 
-            g.DrawImage(planetImage, planetRec);
+           // g.DrawImage(planetImage, planetRec);
         }
         public void movePlanet(Graphics g)
         {
