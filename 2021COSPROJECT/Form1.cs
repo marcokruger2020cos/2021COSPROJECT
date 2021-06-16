@@ -77,6 +77,29 @@ namespace _2021COSPROJECT
 
         }
 
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Left) { turnLeft = true; }
+            if (e.KeyData == Keys.Right) { turnRight = true; }
+
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Left) { turnLeft = false; }
+            if (e.KeyData == Keys.Right) { turnRight = false; }
+
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                missiles.Add(new Missile(spaceship.spaceRec, spaceship.rotationAngle));
+            }
+
+        }
+
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
 
