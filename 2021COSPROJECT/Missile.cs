@@ -50,6 +50,13 @@ namespace _2021COSPROJECT
             g.Transform = matrixMissile;
             //Draw the missile
             g.DrawImage(missile, missileRec);
+            //
+            //
+            //BETA CODE BENEATH MIGHT NEED TO BE DELETED
+           // y -= 30;//speed of missile
+          //  missileRec = new Rectangle(x, y, width, height);
+           // g.DrawImage(missile, missileRec);
+
 
         }
 

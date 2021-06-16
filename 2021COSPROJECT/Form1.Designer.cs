@@ -40,7 +40,7 @@ namespace _2021COSPROJECT
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tmrShoot_tick = new System.Windows.Forms.Timer(this.components);
+            this.tmrShoot = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
@@ -122,9 +122,10 @@ namespace _2021COSPROJECT
             this.playToolStripMenuItem.Text = "Play";
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
-            // tmrShoot_tick
+            // tmrShoot
             // 
-            this.tmrShoot_tick.Enabled = true;
+            this.tmrShoot.Enabled = true;
+            this.tmrShoot.Tick += new System.EventHandler(this.tmrShoot_Tick);
             // 
             // Form1
             // 
@@ -163,7 +164,7 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pauseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playToolStripMenuItem;
-        private System.Windows.Forms.Timer tmrShoot_tick;
+        private System.Windows.Forms.Timer tmrShoot;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Timer timer1;
     }

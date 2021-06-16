@@ -23,7 +23,14 @@ namespace _2021COSPROJECT
         public Form1()
         {
             InitializeComponent();
-        
+
+            for (int i = 0; i < 7; i++)
+            {
+                int displacement = 10 + (i * 70);
+                planets.Add(new Planet(displacement));
+            }
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -36,6 +43,7 @@ namespace _2021COSPROJECT
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
             spaceship.moveSpaceship(e.X, e.Y);
+            this.Invalidate();
         }
 
         private void tmrSpaceship_Tick(object sender, EventArgs e)
@@ -98,6 +106,26 @@ namespace _2021COSPROJECT
                 missiles.Add(new Missile(spaceship.spaceRec, spaceship.rotationAngle));
             }
 
+        }
+
+        private void tmrShoot_Tick(object sender, EventArgs e)
+        {
+            foreach (Planet p in planets)
+            {
+
+                foreach (Missile m in missiles)
+                {
+                   if (p.planetRec.IntersectsWith(m.missileRec))
+                    {
+                   
+                       missiles.Remove(m);
+                       break;
+                    }
+                }
+
+            }
+
+            this.Invalidate();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
