@@ -40,19 +40,16 @@ namespace _2021COSPROJECT
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Explosive1 = new System.Windows.Forms.PictureBox();
             this.tmrShoot_tick = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Explosive1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tmrSpaceship
             // 
             this.tmrSpaceship.Enabled = true;
-            this.tmrSpaceship.Interval = 10;
+            this.tmrSpaceship.Interval = 1;
             this.tmrSpaceship.Tick += new System.EventHandler(this.tmrSpaceship_Tick);
             // 
             // menuStrip1
@@ -125,32 +122,9 @@ namespace _2021COSPROJECT
             this.playToolStripMenuItem.Text = "Play";
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
             // 
-            // Explosive1
-            // 
-            this.Explosive1.BackColor = System.Drawing.Color.DarkRed;
-            this.Explosive1.Location = new System.Drawing.Point(1143, 393);
-            this.Explosive1.Name = "Explosive1";
-            this.Explosive1.Size = new System.Drawing.Size(89, 93);
-            this.Explosive1.TabIndex = 1;
-            this.Explosive1.TabStop = false;
-            this.Explosive1.Click += new System.EventHandler(this.Explosive1_Click);
-            // 
             // tmrShoot_tick
             // 
             this.tmrShoot_tick.Enabled = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.Explosive1);
-            this.panel1.Location = new System.Drawing.Point(0, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1232, 486);
-            this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseClick);
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.panel1.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.panel1_PreviewKeyDown);
             // 
             // Form1
             // 
@@ -158,7 +132,6 @@ namespace _2021COSPROJECT
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1232, 516);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.KeyPreview = true;
@@ -167,12 +140,9 @@ namespace _2021COSPROJECT
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Explosive1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,12 +158,11 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.PictureBox Explosive1;
         private System.Windows.Forms.ToolStripMenuItem pauseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem playToolStripMenuItem;
         private System.Windows.Forms.Timer tmrShoot_tick;
-        private System.Windows.Forms.Panel panel1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

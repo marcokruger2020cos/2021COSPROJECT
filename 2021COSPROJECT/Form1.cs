@@ -23,11 +23,7 @@ namespace _2021COSPROJECT
         public Form1()
         {
             InitializeComponent();
-            for (int i = 0; i < 7; i++)
-            {
-                int displacement = 10 + (i * 70);
-                planets.Add(new Planet(displacement));
-            }
+        
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,23 +31,7 @@ namespace _2021COSPROJECT
 
         }
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            //get the graphics used to paint on the Form control
-            g = e.Graphics;
-            //Draw the spaceship
-            spaceship.drawSpaceship(g);
-            foreach (Missile m in missiles)
-            {
-                m.drawMissile(g);
-                m.moveMissile(g);
-            }
-            foreach (Planet p in planets)
-            {
-                p.draw(g);//Draw the planet
-                p.movePlanet(g);//move the planet
-            }
-        }
+       
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -72,25 +52,6 @@ namespace _2021COSPROJECT
             Invalidate();
         }
         
-
-
-
-        private void panel1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Left) { turnLeft = true; }
-            if (e.KeyData == Keys.Right) { turnRight = true; }
-
-        }
-
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                missiles.Add(new Missile(spaceship.spaceRec, spaceship.rotationAngle));
-            }
-
-        }
-
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
@@ -116,11 +77,9 @@ namespace _2021COSPROJECT
 
         }
 
-        
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Form1_Paint(object sender, PaintEventArgs e)
         {
-           
+
             //get the graphics used to paint on the Form control
             g = e.Graphics;
             //Draw the spaceship
@@ -135,40 +94,11 @@ namespace _2021COSPROJECT
                 p.draw(g);//Draw the planet
                 p.movePlanet(g);//move the planet
             }
-
         }
 
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            spaceship.moveSpaceship(e.X, e.Y);
-            panel1.Invalidate();
+        
 
-        }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                missiles.Add(new Missile(spaceship.spaceRec, spaceship.rotationAngle));
-            }
-        }
-
-        private void panel1_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void panel1_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-
-        }
-
-        private void panel1_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Left) { turnLeft = false; }
-            if (e.KeyData == Keys.Right) { turnRight = false; }
-        }
-       
 
     }
 }
