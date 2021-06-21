@@ -112,12 +112,13 @@ namespace _2021COSPROJECT
         {
             foreach (Planet p in planets)
             {
-
+                p.x = 20;
                 foreach (Missile m in missiles)
                 {
                    if (p.planetRec.IntersectsWith(m.missileRec))
                     {
                         p.y = -20;// relocate planet to the top of the form
+                        p.x = 20;//rotation messses these things up
                         missiles.Remove(m);
                        break;
                     }
@@ -135,7 +136,7 @@ namespace _2021COSPROJECT
             g = e.Graphics;
             //Draw the spaceship
             spaceship.drawSpaceship(g);
-            foreach (Missile m in missiles)
+            foreach (Missile m in missiles)  // try ordering the commands more
             {
                 m.drawMissile(g);
                 m.moveMissile(g);
@@ -144,11 +145,11 @@ namespace _2021COSPROJECT
             {
                 p.draw(g);//Draw the planet
                 p.movePlanet(g);//move the planet
-
-                    if (p.y >= ClientSize.Height)
-                    {
-                    p.y = -20;
-                    }
+        //if the planet reaches the bottom of the form relocate it back to the top   
+                if (p.y >= ClientSize.Height)
+                {
+                 p.y = -20;
+                }
 
             }
             //if the planet reaches the bottom of the form relocate it back to the top
@@ -156,6 +157,7 @@ namespace _2021COSPROJECT
             //{
             //    p.y = -20;
             //}
+            //Was at the wrong place
 
         }
 
