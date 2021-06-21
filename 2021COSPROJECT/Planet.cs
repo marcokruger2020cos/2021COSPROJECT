@@ -38,7 +38,7 @@ namespace _2021COSPROJECT
         }
         public void movePlanet(Graphics g)
         {
-            y += 5;
+            y += 5; //This is supposed to move the planets down
             planetRec.Location = new Point(x, y);
 
         }

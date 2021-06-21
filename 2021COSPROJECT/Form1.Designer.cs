@@ -125,6 +125,7 @@ namespace _2021COSPROJECT
             // tmrShoot
             // 
             this.tmrShoot.Enabled = true;
+            this.tmrShoot.Interval = 1;
             this.tmrShoot.Tick += new System.EventHandler(this.tmrShoot_Tick);
             // 
             // Form1

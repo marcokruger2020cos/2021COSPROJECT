@@ -144,12 +144,18 @@ namespace _2021COSPROJECT
             {
                 p.draw(g);//Draw the planet
                 p.movePlanet(g);//move the planet
+
+                    if (p.y >= ClientSize.Height)
+                    {
+                    p.y = -20;
+                    }
+
             }
             //if the planet reaches the bottom of the form relocate it back to the top
-            if (p.y >= ClientSize.Height)
-            {
-                p.y = -20;
-            }
+            //if (.y >= ClientSize.Height)
+            //{
+            //    p.y = -20;
+            //}
 
         }
 
