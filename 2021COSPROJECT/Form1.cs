@@ -126,7 +126,7 @@ namespace _2021COSPROJECT
 
             }
 
-            this.Invalidate();
+            //this.Invalidate();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)

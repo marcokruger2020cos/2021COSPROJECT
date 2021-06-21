@@ -16,9 +16,9 @@ namespace _2021COSPROJECT
         //Just rename the classes as the example was used
         public int x, y, width, height;//variables for the rectangle
         public Image spaceship;//variable for the planet's image
-        public int rotationAngle;
-        public Matrix matrix;
-        Point centre;
+        public int rotationAngle;//Angle
+        public Matrix matrix;//Matrix for rotatiom
+        Point centre;//The point 
         public Rectangle spaceRec;//variable for a rectangle to place our image in
         
         
