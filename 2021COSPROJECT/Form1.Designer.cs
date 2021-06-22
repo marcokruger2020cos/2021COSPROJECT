@@ -30,7 +30,7 @@ namespace _2021COSPROJECT
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.tmrSpaceship = new System.Windows.Forms.Timer(this.components);
+            this.tmrCharacter = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,11 +46,11 @@ namespace _2021COSPROJECT
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tmrSpaceship
+            // tmrCharacter
             // 
-            this.tmrSpaceship.Enabled = true;
-            this.tmrSpaceship.Interval = 1;
-            this.tmrSpaceship.Tick += new System.EventHandler(this.tmrSpaceship_Tick);
+            this.tmrCharacter.Enabled = true;
+            this.tmrCharacter.Interval = 1;
+            this.tmrCharacter.Tick += new System.EventHandler(this.tmrSpaceship_Tick);
             // 
             // menuStrip1
             // 
@@ -155,7 +155,7 @@ namespace _2021COSPROJECT
 
         #endregion
 
-        private System.Windows.Forms.Timer tmrSpaceship;
+        private System.Windows.Forms.Timer tmrCharacter;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;

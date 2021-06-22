@@ -22,15 +22,14 @@ namespace _2021COSPROJECT
 
         public Form1()
         {
+            
+            
             InitializeComponent();
-
          //   for (int i = 0; i < 7; i++)
          //   {
          //      int displacement = 10 + (i * 70);
          //       planets.Add(new Planet(displacement));
          //   }  MATH THAT DOES NOT WORK RESULTING IN THE SPINNING OF PLANETS
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -72,12 +71,12 @@ namespace _2021COSPROJECT
 
         private void pauseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          tmrSpaceship.Stop();//Pause button
+          tmrCharacter.Stop();//Pause button
         }
 
         private void playToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            tmrSpaceship.Start();//Start button
+            tmrCharacter.Start();//Start button
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -141,12 +140,13 @@ namespace _2021COSPROJECT
                 m.drawMissile(g);
                 m.moveMissile(g);
             }
-            
 
 
 
 
 
+
+        }
     }
 }
 
