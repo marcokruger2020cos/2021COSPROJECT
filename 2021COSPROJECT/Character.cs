@@ -10,7 +10,7 @@ using System.Drawing;
 
 namespace _2021COSPROJECT
 {
-    class Spaceship
+    class Character
     {
         // declare fields to use in the class
         //Just rename the classes as the example was used
@@ -25,7 +25,7 @@ namespace _2021COSPROJECT
         
 
         //Create a constructor (initialises the values of the fields)
-        public Spaceship()
+        public Character()
         {
 
             x = 10;

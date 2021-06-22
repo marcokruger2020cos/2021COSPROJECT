@@ -14,21 +14,21 @@ namespace _2021COSPROJECT
     public partial class Form1 : Form
     {
         Graphics g; //declare a graphics object called g so we can draw on the Form
-        Spaceship spaceship = new Spaceship(); //create an instance of the Spaceship Class called spaceship
+        Character spaceship = new Character(); //create an instance of the Spaceship Class called spaceship
         bool turnLeft, turnRight;
         //declare a list  missiles from the Missile class
         List<Missile> missiles = new List<Missile>();
-        List<Planet> planets = new List<Planet>();
+        List<Enemy> planets = new List<Enemy>();
 
         public Form1()
         {
             InitializeComponent();
 
-            for (int i = 0; i < 7; i++)
-            {
-                int displacement = 10 + (i * 70);
-                planets.Add(new Planet(displacement));
-            }
+         //   for (int i = 0; i < 7; i++)
+         //   {
+         //      int displacement = 10 + (i * 70);
+         //       planets.Add(new Planet(displacement));
+         //   }  MATH THAT DOES NOT WORK RESULTING IN THE SPINNING OF PLANETS
 
 
         }
@@ -110,19 +110,19 @@ namespace _2021COSPROJECT
 
         private void tmrShoot_Tick(object sender, EventArgs e)
         {
-            foreach (Planet p in planets)
+            foreach (Enemy p in planets)
             {
-                p.x = 20;
-                foreach (Missile m in missiles)
-                {
-                   if (p.planetRec.IntersectsWith(m.missileRec))
-                    {
-                        p.y = -20;// relocate planet to the top of the form
-                        p.x = 20;//rotation messses these things up
-                        missiles.Remove(m);
-                       break;
-                    }
-                }
+               // p.x = 50;
+              //  foreach (Missile m in missiles)
+              //  {
+               //    if (p.planetRec.IntersectsWith(m.missileRec))
+               //     {
+                //        p.y = -20;// relocate planet to the top of the form
+                //        p.x = 20;//rotation messses these things up
+                 //       missiles.Remove(m);
+                 //      break;
+                 //   }
+                 //  } I wont delete this code as it is where the shoot detection event is placed
 
             }
 
@@ -141,25 +141,7 @@ namespace _2021COSPROJECT
                 m.drawMissile(g);
                 m.moveMissile(g);
             }
-            foreach (Planet p in planets)
-            {
-                p.draw(g);//Draw the planet
-                p.movePlanet(g);//move the planet
-        //if the planet reaches the bottom of the form relocate it back to the top   
-                if (p.y >= ClientSize.Height)
-                {
-                 p.y = -20;
-                }
-
-            }
-            //if the planet reaches the bottom of the form relocate it back to the top
-            //if (.y >= ClientSize.Height)
-            //{
-            //    p.y = -20;
-            //}
-            //Was at the wrong place
-
-        }
+            
 
 
 
