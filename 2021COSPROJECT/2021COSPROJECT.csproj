@@ -86,5 +86,8 @@
   <ItemGroup>
     <None Include="Resources\shooter.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\560-5602554_ruiner-enemies-cyberpunk-anime-cyberpunk-character-cyberpunk-enemies.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

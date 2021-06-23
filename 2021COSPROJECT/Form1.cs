@@ -14,11 +14,11 @@ namespace _2021COSPROJECT
     public partial class Form1 : Form
     {
         Graphics g; //declare a graphics object called g so we can draw on the Form
-        Character spaceship = new Character(); //create an instance of the Spaceship Class called spaceship
+        Character character = new Character(); //create an instance of the Spaceship Class called spaceship
         bool turnLeft, turnRight;
         //declare a list  missiles from the Missile class
         List<Missile> missiles = new List<Missile>();
-        List<Enemy> planets = new List<Enemy>();
+        List<Enemy> enemies = new List<Enemy>();
 
         public Form1()
         {
@@ -41,7 +41,7 @@ namespace _2021COSPROJECT
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            spaceship.moveSpaceship(e.X, e.Y);
+            character.moveSpaceship(e.X, e.Y);              //Moves the character with the mouse
             this.Invalidate();
         }
 
@@ -49,11 +49,11 @@ namespace _2021COSPROJECT
         {
             if (turnRight)
             {
-                spaceship.rotationAngle += 5;
+                character.rotationAngle += 5;               //turn character right
             }
             if (turnLeft)
             {
-                spaceship.rotationAngle -= 5;
+                character.rotationAngle -= 5;               //turn character left
             }
                
             Invalidate();
@@ -61,7 +61,7 @@ namespace _2021COSPROJECT
         
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            System.Windows.Forms.Application.Exit();          //Close game when exit is clicked
         }
 
         private void Explosive1_Click(object sender, EventArgs e)
@@ -102,14 +102,14 @@ namespace _2021COSPROJECT
         {
             if (e.Button == MouseButtons.Left)
             {
-                missiles.Add(new Missile(spaceship.spaceRec, spaceship.rotationAngle));
+                missiles.Add(new Missile(character.spaceRec, character.rotationAngle));
             }
 
         }
 
         private void tmrShoot_Tick(object sender, EventArgs e)
         {
-            foreach (Enemy p in planets)
+            foreach (Enemy p in enemies)
             {
                // p.x = 50;
               //  foreach (Missile m in missiles)
@@ -121,11 +121,16 @@ namespace _2021COSPROJECT
                  //       missiles.Remove(m);
                  //      break;
                  //   }
-                 //  } I wont delete this code as it is where the shoot detection event is placed
+                 //  } I wont delete this code as it is where the shoot detection event is placed it worked for 1 plane detection but not 360 rotation
 
             }
 
             //this.Invalidate();
+        }
+
+        private void explosive1_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -134,7 +139,7 @@ namespace _2021COSPROJECT
             //get the graphics used to paint on the Form control
             g = e.Graphics;
             //Draw the spaceship
-            spaceship.drawSpaceship(g);
+            character.drawSpaceship(g);
             foreach (Missile m in missiles)  // try ordering the commands more
             {
                 m.drawMissile(g);
