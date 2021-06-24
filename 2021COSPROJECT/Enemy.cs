@@ -32,7 +32,7 @@ namespace _2021COSPROJECT
 
             g.DrawImage(enemyImage, enemyRec);
         }
-        public void movePlanet(Graphics g)
+        public void moveenemy(Graphics g)
         {
             y += 5;
             enemyRec.Location = new Point(x, y);

@@ -15,7 +15,7 @@ namespace _2021COSPROJECT
     {
         Graphics g; //declare a graphics object called g so we can draw on the Form
         Character character = new Character(); //create an instance of the Spaceship Class called spaceship
-        bool turnLeft, turnRight;
+        bool turnLeft, turnRight;//Not being used for now
         //declare a list  missiles from the Missile class
         List<Missile> missiles = new List<Missile>();
         List<Enemy> enemies = new List<Enemy>();
@@ -25,11 +25,11 @@ namespace _2021COSPROJECT
             
             
             InitializeComponent();
-         //   for (int i = 0; i < 7; i++)
-         //   {
-         //      int displacement = 10 + (i * 70);
-         //       planets.Add(new Planet(displacement));
-         //   }  MATH THAT DOES NOT WORK RESULTING IN THE SPINNING OF PLANETS
+            for (int i = 0; i < 7; i++)
+            {
+                int displacement = 10 + (i * 70);
+                enemies.Add(new Enemy(displacement));
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,23 +41,11 @@ namespace _2021COSPROJECT
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            character.moveSpaceship(e.X, e.Y);              //Moves the character with the mouse
+            character.moveSpaceship(e.X);
             this.Invalidate();
         }
 
-        private void tmrSpaceship_Tick(object sender, EventArgs e)
-        {
-            if (turnRight)
-            {
-                character.rotationAngle += 5;               //turn character right
-            }
-            if (turnLeft)
-            {
-                character.rotationAngle -= 5;               //turn character left
-            }
-               
-            Invalidate();
-        }
+       
         
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -102,8 +90,12 @@ namespace _2021COSPROJECT
         {
             if (e.Button == MouseButtons.Left)
             {
-                missiles.Add(new Missile(character.spaceRec, character.rotationAngle));
+                missiles.Add(new Missile(character.characterrec));
             }
+
+
+
+
 
         }
 
@@ -111,24 +103,28 @@ namespace _2021COSPROJECT
         {
             foreach (Enemy p in enemies)
             {
-               // p.x = 50;
-              //  foreach (Missile m in missiles)
-              //  {
-               //    if (p.planetRec.IntersectsWith(m.missileRec))
-               //     {
-                //        p.y = -20;// relocate planet to the top of the form
-                //        p.x = 20;//rotation messses these things up
-                 //       missiles.Remove(m);
-                 //      break;
-                 //   }
-                 //  } I wont delete this code as it is where the shoot detection event is placed it worked for 1 plane detection but not 360 rotation
+
+                foreach (Missile m in missiles)
+                {
+                    if (p.enemyRec.IntersectsWith(m.missileRec))
+                    {
+                        p.y = -50;// relocate planet to the top of the form
+                        missiles.Remove(m);
+                        break;
+                    }
+                }
 
             }
 
-            //this.Invalidate();
+            this.Invalidate();
         }
 
         private void explosive1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }
@@ -140,11 +136,24 @@ namespace _2021COSPROJECT
             g = e.Graphics;
             //Draw the spaceship
             character.drawSpaceship(g);
-            foreach (Missile m in missiles)  // try ordering the commands more
+            foreach (Missile m in missiles)
             {
-                m.drawMissile(g);
-                m.moveMissile(g);
+                m.draw(g);
             }
+
+            foreach (Enemy p in enemies)
+            {
+                p.draw(g);//Draw the planet
+                p.moveenemy(g);//move the planet
+                 if (p.y >= ClientSize.Height)
+            {
+                p.y = -20;
+            }
+            }
+            //if the planet reaches the bottom of the form relocate it back to the top
+           
+
+
 
 
 
