@@ -69,7 +69,9 @@ namespace _2021COSPROJECT
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form2 frm = new Form2();
+            frm.Show();
+            this.Hide();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
