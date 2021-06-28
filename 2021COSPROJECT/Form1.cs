@@ -15,7 +15,7 @@ namespace _2021COSPROJECT
     {
         Graphics g; //declare a graphics object called g so we can draw on the Form
         Character character = new Character(); //create an instance of the Spaceship Class called spaceship
-        bool turnLeft, turnRight;//Not being used for now
+       // bool turnLeft, turnRight;//Not being used for now
         //declare a list  missiles from the Missile class
         List<Missile> missiles = new List<Missile>();
         List<Enemy> enemies = new List<Enemy>();
@@ -143,15 +143,15 @@ namespace _2021COSPROJECT
                 m.draw(g);
             }
 
-            foreach (Enemy p in enemies)
-            {
+           foreach (Enemy p in enemies)
+           {
                 p.draw(g);//Draw the planet
                 p.moveenemy(g);//move the planet
                  if (p.y >= ClientSize.Height)
-            {
+                 {
                 p.y = -20;
-            }
-            }
+                 }
+           }
             //if the planet reaches the bottom of the form relocate it back to the top
            
 
