@@ -15,7 +15,7 @@ namespace _2021COSPROJECT
     {
         Graphics g; //declare a graphics object called g so we can draw on the Form
         Character character = new Character(); //create an instance of the Spaceship Class called spaceship
-       // bool turnLeft, turnRight;//Not being used for now
+        bool turnLeft, turnRight;//Not being used for now
         //declare a list  missiles from the Missile class
         List<Missile> missiles = new List<Missile>();
         List<Enemy> enemies = new List<Enemy>();
@@ -27,7 +27,7 @@ namespace _2021COSPROJECT
             InitializeComponent();
             for (int i = 0; i < 7; i++)
             {
-                int displacement = 10 + (i * 70);
+                int displacement = 12 + (i * 70);
                 enemies.Add(new Enemy(displacement));
             }
         }
@@ -110,7 +110,7 @@ namespace _2021COSPROJECT
                 {
                     if (p.enemyRec.IntersectsWith(m.missileRec))
                     {
-                        p.y = -50;// relocate planet to the top of the form
+                        p.y = -100;// relocate planet to the top of the form
                         missiles.Remove(m);
                         break;
                     }

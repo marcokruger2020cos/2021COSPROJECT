@@ -45,8 +45,10 @@ namespace _2021COSPROJECT
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.explosive1 = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.explosive1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrCharacter
@@ -137,12 +139,21 @@ namespace _2021COSPROJECT
             // explosive1
             // 
             this.explosive1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.explosive1.Location = new System.Drawing.Point(196, 504);
+            this.explosive1.Location = new System.Drawing.Point(12, 27);
             this.explosive1.Name = "explosive1";
             this.explosive1.Size = new System.Drawing.Size(17, 26);
             this.explosive1.TabIndex = 1;
             this.explosive1.TabStop = false;
             this.explosive1.Click += new System.EventHandler(this.explosive1_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox1.Location = new System.Drawing.Point(438, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(17, 26);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -150,6 +161,7 @@ namespace _2021COSPROJECT
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(467, 561);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.explosive1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -166,6 +178,7 @@ namespace _2021COSPROJECT
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.explosive1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,6 +201,7 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox explosive1;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
