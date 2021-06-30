@@ -46,6 +46,8 @@ namespace _2021COSPROJECT
             this.explosive1 = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblScore = new System.Windows.Forms.Label();
+            this.lblHealth = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.explosive1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -155,12 +157,35 @@ namespace _2021COSPROJECT
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.Location = new System.Drawing.Point(243, 0);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(65, 23);
+            this.lblScore.TabIndex = 3;
+            this.lblScore.Text = "Score: 0";
+            // 
+            // lblHealth
+            // 
+            this.lblHealth.AutoSize = true;
+            this.lblHealth.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHealth.Location = new System.Drawing.Point(314, 0);
+            this.lblHealth.Name = "lblHealth";
+            this.lblHealth.Size = new System.Drawing.Size(87, 23);
+            this.lblHealth.TabIndex = 4;
+            this.lblHealth.Text = "Health:100";
+            this.lblHealth.Click += new System.EventHandler(this.lbHealth_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(467, 561);
+            this.Controls.Add(this.lblHealth);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.explosive1);
             this.Controls.Add(this.menuStrip1);
@@ -202,6 +227,8 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.PictureBox explosive1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label lblHealth;
     }
 }
 

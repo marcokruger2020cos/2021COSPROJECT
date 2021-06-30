@@ -14,7 +14,6 @@ namespace _2021COSPROJECT
     {
         public int x, y, width, height;//variables for the rectangle
         public Image character;//variable for the spaceship's image
-
         public Rectangle characterrec;//variable for a rectangle to place our image in
 
         //Create a constructor (initialises the values of the fields)
@@ -28,12 +27,13 @@ namespace _2021COSPROJECT
             characterrec = new Rectangle(x, y, width, height);
         }
 
-        public void drawSpaceship(Graphics g)
+        public void drawcharacter(Graphics g)
         {
+            
             g.DrawImage(character, characterrec);
         }
 
-        public void moveSpaceship(int mouseX)
+        public void movecharacter(int mouseX)
         {
             characterrec.X = mouseX - (characterrec.Width / 2);
         }

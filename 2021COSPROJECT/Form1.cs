@@ -19,6 +19,9 @@ namespace _2021COSPROJECT
         //declare a list  missiles from the Missile class
         List<Missile> missiles = new List<Missile>();
         List<Enemy> enemies = new List<Enemy>();
+        List<Character> characters = new List<Character>();
+        int Score = 0;
+        int Health = 100;
 
         public Form1()
         {
@@ -41,7 +44,7 @@ namespace _2021COSPROJECT
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            character.moveSpaceship(e.X);
+            character.movecharacter(e.X);
             this.Invalidate();
         }
 
@@ -112,10 +115,22 @@ namespace _2021COSPROJECT
                     {
                         p.y = -100;// relocate planet to the top of the form
                         missiles.Remove(m);
+                        Score++;
+                        lblScore.Text = "Score" + Score;
                         break;
+                    }   
+                }
+                foreach (Character c in characters)
+                {
+                    foreach (Missile m in missiles)
+                    {
+                        if (c.characterrec.IntersectsWith(p.enemyRec))
+                        {
+                            Health++;
+                            lblHealth.Text = "Health" + Health;
+                        }
                     }
                 }
-
             }
 
             this.Invalidate();
@@ -131,13 +146,18 @@ namespace _2021COSPROJECT
 
         }
 
+        private void lbHealth_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
 
             //get the graphics used to paint on the Form control
             g = e.Graphics;
             //Draw the spaceship
-            character.drawSpaceship(g);
+            character.drawcharacter(g);
             foreach (Missile m in missiles)
             {
                 m.draw(g);
