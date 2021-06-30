@@ -14,7 +14,7 @@ namespace _2021COSPROJECT
     public partial class Form1 : Form
     {
         Graphics g; //declare a graphics object called g so we can draw on the Form
-        Character character = new Character(); //create an instance of the Spaceship Class called spaceship
+        Character character = new Character(); //create an instance of the Character Class called spaceship
         bool turnLeft, turnRight;//Not being used for now
         //declare a list  missiles from the Missile class
         List<Missile> missiles = new List<Missile>();
