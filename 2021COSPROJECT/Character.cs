@@ -31,6 +31,7 @@ namespace _2021COSPROJECT
         {
             
             g.DrawImage(character, characterrec);
+            
         }
 
         public void movecharacter(int mouseX)

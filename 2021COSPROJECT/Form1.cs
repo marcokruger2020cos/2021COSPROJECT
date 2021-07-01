@@ -118,7 +118,8 @@ namespace _2021COSPROJECT
                         Score++;
                         lblScore.Text = "Score" + Score;
                         break;
-                    }   
+                    }
+                    
                 }
                 foreach (Character c in characters)
                 {
@@ -126,12 +127,16 @@ namespace _2021COSPROJECT
                     {
                         if (c.characterrec.IntersectsWith(p.enemyRec))
                         {
+                            c.x = -1000;
                             Health++;
                             lblHealth.Text = "Health" + Health;
+                            break;
                         }
                     }
                 }
             }
+
+
 
             this.Invalidate();
         }
