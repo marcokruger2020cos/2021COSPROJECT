@@ -30,6 +30,7 @@ namespace _2021COSPROJECT
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tmrCharacter = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,7 +43,7 @@ namespace _2021COSPROJECT
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrShoot = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tmrStop = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.lblScore = new System.Windows.Forms.Label();
             this.lblHealth = new System.Windows.Forms.Label();
@@ -137,9 +138,11 @@ namespace _2021COSPROJECT
             this.tmrShoot.Interval = 1;
             this.tmrShoot.Tick += new System.EventHandler(this.tmrShoot_Tick);
             // 
-            // timer1
+            // tmrStop
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.tmrStop.Enabled = true;
+            this.tmrStop.Interval = 1;
+            this.tmrStop.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lblScore
             // 
@@ -164,10 +167,10 @@ namespace _2021COSPROJECT
             // 
             // Reactor
             // 
-            this.Reactor.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.Reactor.Location = new System.Drawing.Point(214, 546);
+            this.Reactor.BackColor = System.Drawing.Color.Red;
+            this.Reactor.Location = new System.Drawing.Point(223, 539);
             this.Reactor.Name = "Reactor";
-            this.Reactor.Size = new System.Drawing.Size(40, 40);
+            this.Reactor.Size = new System.Drawing.Size(40, 10);
             this.Reactor.TabIndex = 5;
             this.Reactor.TabStop = false;
             this.Reactor.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -195,7 +198,9 @@ namespace _2021COSPROJECT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(467, 561);
             this.Controls.Add(this.Reactor);
             this.Controls.Add(this.lblHealth);
@@ -238,7 +243,7 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.ToolStripMenuItem playToolStripMenuItem;
         private System.Windows.Forms.Timer tmrShoot;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer tmrStop;
         private System.Windows.Forms.PictureBox explosive1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox pictureBox1;

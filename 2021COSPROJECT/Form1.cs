@@ -108,14 +108,7 @@ namespace _2021COSPROJECT
 
         private void tmrShoot_Tick(object sender, EventArgs e)
         {
-            if (Score > 54)
-            {
-                tmrCharacter.Stop();
-                tmrShoot.Stop();
-                Form4 newForm = new Form4();
-                newForm.Show();
-                System.Windows.Forms.Application.Exit();//Close game 
-            }
+           
 
 
             foreach (Enemy p in enemies)
@@ -157,7 +150,16 @@ namespace _2021COSPROJECT
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (Score > 54)
+            {
+                tmrStop.Stop();
+                tmrCharacter.Stop();
+                tmrShoot.Stop();
+                Form4 newForm = new Form4();
+                newForm.Show();
 
+
+            }
         }
 
         private void lbHealth_Click(object sender, EventArgs e)

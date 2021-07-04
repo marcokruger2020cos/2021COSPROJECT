@@ -18,7 +18,7 @@ namespace _2021COSPROJECT
         public Enemy(int displacement)
         {
             x = displacement;
-            y = 10;
+            y = 5;
             width = 35;
             height = 35;
             enemyImage = Properties.Resources.enemy1;
