@@ -43,20 +43,23 @@ namespace _2021COSPROJECT
             this.tmrShoot = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.explosive1 = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblScore = new System.Windows.Forms.Label();
             this.lblHealth = new System.Windows.Forms.Label();
+            this.Reactor = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.explosive1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.explosive1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Reactor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.explosive1)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrCharacter
             // 
             this.tmrCharacter.Enabled = true;
             this.tmrCharacter.Interval = 1;
+            this.tmrCharacter.Tick += new System.EventHandler(this.tmrCharacter_Tick);
             // 
             // menuStrip1
             // 
@@ -138,25 +141,6 @@ namespace _2021COSPROJECT
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // explosive1
-            // 
-            this.explosive1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.explosive1.Location = new System.Drawing.Point(12, 27);
-            this.explosive1.Name = "explosive1";
-            this.explosive1.Size = new System.Drawing.Size(17, 26);
-            this.explosive1.TabIndex = 1;
-            this.explosive1.TabStop = false;
-            this.explosive1.Click += new System.EventHandler(this.explosive1_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox1.Location = new System.Drawing.Point(438, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(17, 26);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblScore
             // 
             this.lblScore.AutoSize = true;
@@ -173,10 +157,39 @@ namespace _2021COSPROJECT
             this.lblHealth.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHealth.Location = new System.Drawing.Point(314, 0);
             this.lblHealth.Name = "lblHealth";
-            this.lblHealth.Size = new System.Drawing.Size(67, 23);
+            this.lblHealth.Size = new System.Drawing.Size(123, 23);
             this.lblHealth.TabIndex = 4;
-            this.lblHealth.Text = "Health:0";
+            this.lblHealth.Text = "Reactor Health:0";
             this.lblHealth.Click += new System.EventHandler(this.lbHealth_Click);
+            // 
+            // Reactor
+            // 
+            this.Reactor.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.Reactor.Location = new System.Drawing.Point(214, 546);
+            this.Reactor.Name = "Reactor";
+            this.Reactor.Size = new System.Drawing.Size(40, 40);
+            this.Reactor.TabIndex = 5;
+            this.Reactor.TabStop = false;
+            this.Reactor.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBox1.Location = new System.Drawing.Point(450, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(17, 26);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // explosive1
+            // 
+            this.explosive1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.explosive1.Location = new System.Drawing.Point(0, 27);
+            this.explosive1.Name = "explosive1";
+            this.explosive1.Size = new System.Drawing.Size(17, 26);
+            this.explosive1.TabIndex = 1;
+            this.explosive1.TabStop = false;
+            this.explosive1.Click += new System.EventHandler(this.explosive1_Click_1);
             // 
             // Form1
             // 
@@ -184,6 +197,7 @@ namespace _2021COSPROJECT
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(467, 561);
+            this.Controls.Add(this.Reactor);
             this.Controls.Add(this.lblHealth);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.pictureBox1);
@@ -202,8 +216,9 @@ namespace _2021COSPROJECT
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.explosive1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Reactor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.explosive1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,6 +244,7 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblHealth;
+        private System.Windows.Forms.PictureBox Reactor;
     }
 }
 

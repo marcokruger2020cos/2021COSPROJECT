@@ -13,6 +13,7 @@ namespace _2021COSPROJECT
 {
     public partial class Form1 : Form
     {
+        
         Graphics g; //declare a graphics object called g so we can draw on the Form
         Character character = new Character(); //create an instance of the Character Class called spaceship
         bool turnLeft, turnRight;//Not being used for now
@@ -21,7 +22,7 @@ namespace _2021COSPROJECT
         List<Enemy> enemies = new List<Enemy>();
         List<Character> characters = new List<Character>();
         int Score = 0;
-        int Health = 100;
+        int Health = 10000;
 
         public Form1()
         {
@@ -30,7 +31,7 @@ namespace _2021COSPROJECT
             InitializeComponent();
             for (int i = 0; i < 7; i++)
             {
-                int displacement = 12 + (i * 70);
+                int displacement = 9 + (i * 70);
                 enemies.Add(new Enemy(displacement));
             }
         }
@@ -96,6 +97,7 @@ namespace _2021COSPROJECT
             if (e.Button == MouseButtons.Left)
             {
                 missiles.Add(new Missile(character.characterrec));
+              
             }
 
 
@@ -106,6 +108,16 @@ namespace _2021COSPROJECT
 
         private void tmrShoot_Tick(object sender, EventArgs e)
         {
+            if (Score > 54)
+            {
+                tmrCharacter.Stop();
+                tmrShoot.Stop();
+                Form4 newForm = new Form4();
+                newForm.Show();
+                System.Windows.Forms.Application.Exit();//Close game 
+            }
+
+
             foreach (Enemy p in enemies)
             {
 
@@ -113,27 +125,24 @@ namespace _2021COSPROJECT
                 {
                     if (p.enemyRec.IntersectsWith(m.missileRec))
                     {
+                         
                         p.y = -100;// relocate planet to the top of the form
                         missiles.Remove(m);
                         Score++;
                         lblScore.Text = "Score" + Score;
                         break;
                     }
-                    
-                }
-                foreach (Character c in characters)
-                {
-                    foreach (Missile m in missiles)
+                    if (pictureBox1.Bounds.IntersectsWith(p.enemyRec))
                     {
-                        if (c.characterrec.IntersectsWith(p.enemyRec))
-                        {
-                            c.x = -1000;
-                            Health++;
-                            lblHealth.Text = "Health" + Health;
-                            break;
-                        }
+                        Health--;
+                        lblHealth.Text = "Health" + Health;
+                       
                     }
+
+                   
+
                 }
+              
             }
 
 
@@ -154,6 +163,25 @@ namespace _2021COSPROJECT
         private void lbHealth_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tmrCharacter_Tick(object sender, EventArgs e)
+        {
+            int width = this.Width = 483; // get the width of Form.
+
+            if (Reactor.Location.X > width - Reactor.Width) //to check condition if pic box is touch the boundroy of form width
+            {
+                Reactor.Location = new Point(1, Reactor.Location.Y); // pic box is set to the new point. here 1 is indicate of X coordinate.
+            }
+            else
+            {
+                Reactor.Location = new Point(Reactor.Location.X + 3, Reactor.Location.Y); // to move picture box from x coordinate by 100 Point.
+            }
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)

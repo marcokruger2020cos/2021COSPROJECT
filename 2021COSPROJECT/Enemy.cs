@@ -19,8 +19,8 @@ namespace _2021COSPROJECT
         {
             x = displacement;
             y = 10;
-            width = 20;
-            height = 20;
+            width = 35;
+            height = 35;
             enemyImage = Properties.Resources.enemy1;
             enemyRec = new Rectangle(x, y, width, height);
         }
@@ -34,7 +34,7 @@ namespace _2021COSPROJECT
         }
         public void moveenemy(Graphics g)
         {
-            y += 5;
+            y += 2;
             enemyRec.Location = new Point(x, y);
 
         }

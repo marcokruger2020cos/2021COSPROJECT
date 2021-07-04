@@ -17,24 +17,26 @@ namespace _2021COSPROJECT
 
         public Rectangle missileRec;//variable for a rectangle to place our image in
 
-        // in the following constructor we pass in the values of spaceRec which
-        // gives us the position of the spaceship which we can then use to place the
-        // missile where the spaceship is located
+        // in the following constructor we pass in the values of charrec which
+        // gives us the position of the character which we can then use to place the
+        // missile where the character is located
         public Missile(Rectangle spaceRec)
         {
-            x = spaceRec.X + 37; // move missile to middle of spaceship
+            x = spaceRec.X + 37; // move missile to middle of character
             y = spaceRec.Y;
-            width = 15;
-            height = 15;
+            width = 20;
+            height = 20;
             missile = Image.FromFile("missile_small.png");
             missileRec = new Rectangle(x, y, width, height);
         }
 
         public void draw(Graphics g)
         {
-            y -= 30;//speed of missile
+            y -= 30;//speed of bullet
             missileRec = new Rectangle(x, y, width, height);
             g.DrawImage(missile, missileRec);
+
+            
         }
 
     }

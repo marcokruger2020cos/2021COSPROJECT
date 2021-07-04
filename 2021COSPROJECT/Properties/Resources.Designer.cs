@@ -63,6 +63,16 @@ namespace _2021COSPROJECT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap boof {
+            get {
+                object obj = ResourceManager.GetObject("boof", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Character1 {
             get {
                 object obj = ResourceManager.GetObject("Character1", resourceCulture);
