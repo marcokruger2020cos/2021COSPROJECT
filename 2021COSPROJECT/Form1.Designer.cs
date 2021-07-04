@@ -160,9 +160,9 @@ namespace _2021COSPROJECT
             this.lblHealth.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHealth.Location = new System.Drawing.Point(314, 0);
             this.lblHealth.Name = "lblHealth";
-            this.lblHealth.Size = new System.Drawing.Size(123, 23);
+            this.lblHealth.Size = new System.Drawing.Size(107, 23);
             this.lblHealth.TabIndex = 4;
-            this.lblHealth.Text = "Reactor Health:0";
+            this.lblHealth.Text = "Health:10000";
             this.lblHealth.Click += new System.EventHandler(this.lbHealth_Click);
             // 
             // Reactor

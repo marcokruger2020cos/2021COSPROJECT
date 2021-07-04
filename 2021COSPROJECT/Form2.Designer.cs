@@ -43,11 +43,11 @@ namespace _2021COSPROJECT
             // 
             label5.AutoSize = true;
             label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label5.Location = new System.Drawing.Point(410, 251);
+            label5.Location = new System.Drawing.Point(410, 245);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(408, 24);
+            label5.Size = new System.Drawing.Size(430, 24);
             label5.TabIndex = 5;
-            label5.Text = "Protect the reactor befor the enemis sabatoge it.";
+            label5.Text = "Protect the reactor before the enemies sabatoge it.";
             // 
             // label1
             // 
@@ -95,11 +95,12 @@ namespace _2021COSPROJECT
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(108, 293);
+            this.label6.Location = new System.Drawing.Point(108, 283);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 24);
+            this.label6.Size = new System.Drawing.Size(516, 48);
             this.label6.TabIndex = 6;
-            this.label6.Text = "label6";
+            this.label6.Text = "When your score reaches 65 you win and the reactor is safe,\r\nif you dont you lose" +
+    ".";
             // 
             // button1
             // 
