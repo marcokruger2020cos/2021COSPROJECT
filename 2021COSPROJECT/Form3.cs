@@ -16,5 +16,10 @@ namespace _2021COSPROJECT
         {
             InitializeComponent();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

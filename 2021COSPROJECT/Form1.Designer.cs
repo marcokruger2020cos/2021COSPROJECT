@@ -50,6 +50,7 @@ namespace _2021COSPROJECT
             this.Reactor = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.explosive1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Reactor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,20 +90,20 @@ namespace _2021COSPROJECT
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
             // aboutToolStripMenuItem
@@ -110,6 +111,7 @@ namespace _2021COSPROJECT
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -147,6 +149,7 @@ namespace _2021COSPROJECT
             // lblScore
             // 
             this.lblScore.AutoSize = true;
+            this.lblScore.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblScore.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.Location = new System.Drawing.Point(243, 0);
             this.lblScore.Name = "lblScore";
@@ -157,6 +160,7 @@ namespace _2021COSPROJECT
             // lblHealth
             // 
             this.lblHealth.AutoSize = true;
+            this.lblHealth.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblHealth.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHealth.Location = new System.Drawing.Point(314, 0);
             this.lblHealth.Name = "lblHealth";
@@ -168,9 +172,10 @@ namespace _2021COSPROJECT
             // Reactor
             // 
             this.Reactor.BackColor = System.Drawing.Color.Red;
+            this.Reactor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Reactor.BackgroundImage")));
             this.Reactor.Location = new System.Drawing.Point(223, 539);
             this.Reactor.Name = "Reactor";
-            this.Reactor.Size = new System.Drawing.Size(40, 10);
+            this.Reactor.Size = new System.Drawing.Size(40, 22);
             this.Reactor.TabIndex = 5;
             this.Reactor.TabStop = false;
             this.Reactor.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -194,6 +199,18 @@ namespace _2021COSPROJECT
             this.explosive1.TabStop = false;
             this.explosive1.Click += new System.EventHandler(this.explosive1_Click_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label1.Location = new System.Drawing.Point(23, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(410, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Protect the reactor! That\'s a order private!";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,6 +219,7 @@ namespace _2021COSPROJECT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(467, 561);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Reactor);
             this.Controls.Add(this.lblHealth);
             this.Controls.Add(this.lblScore);
@@ -250,6 +268,7 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblHealth;
         private System.Windows.Forms.PictureBox Reactor;
+        private System.Windows.Forms.Label label1;
     }
 }
 

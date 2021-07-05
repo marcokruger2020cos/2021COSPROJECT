@@ -118,7 +118,7 @@ namespace _2021COSPROJECT
                 {
                     if (p.enemyRec.IntersectsWith(m.missileRec))
                     {
-                         
+                        
                         p.y = -100;// relocate planet to the top of the form
                         missiles.Remove(m);
                         Score++;
@@ -182,8 +182,15 @@ namespace _2021COSPROJECT
             }
             else
             {
-                Reactor.Location = new Point(Reactor.Location.X + 3, Reactor.Location.Y); // to move picture box from x coordinate by 100 Point.
+                Reactor.Location = new Point(Reactor.Location.X + 2, Reactor.Location.Y); // to move picture box from x coordinate by 100 Point.
             }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 frm = new Form3();
+            frm.Show();
+            this.Hide();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -200,14 +207,14 @@ namespace _2021COSPROJECT
 
            foreach (Enemy p in enemies)
            {
-                p.draw(g);//Draw the planet
-                p.moveenemy(g);//move the planet
+                p.draw(g);//Draw the enemy
+                p.moveenemy(g);//move the enemy
                  if (p.y >= ClientSize.Height)
                  {
-                p.y = -20;
+                p.y = -15;
                  }
            }
-            //if the planet reaches the bottom of the form relocate it back to the top
+          
            
 
 

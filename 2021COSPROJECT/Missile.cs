@@ -24,9 +24,9 @@ namespace _2021COSPROJECT
         {
             x = spaceRec.X + 37; // move missile to middle of character
             y = spaceRec.Y;
-            width = 20;
-            height = 20;
-            missile = Image.FromFile("missile_small.png");
+            width = 15;
+            height = 15;
+            missile = Image.FromFile("pixil-frame-0 (1).png");
             missileRec = new Rectangle(x, y, width, height);
         }
 

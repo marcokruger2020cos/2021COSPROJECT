@@ -26,5 +26,10 @@ namespace _2021COSPROJECT
                     Application.OpenForms[i].Close();
             }
         }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

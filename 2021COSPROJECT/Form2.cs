@@ -33,5 +33,10 @@ namespace _2021COSPROJECT
             Environment.Exit(1);
 
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
