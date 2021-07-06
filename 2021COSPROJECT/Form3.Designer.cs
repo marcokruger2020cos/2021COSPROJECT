@@ -39,11 +39,9 @@
             this.label1.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(5, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(976, 93);
+            this.label1.Size = new System.Drawing.Size(976, 124);
             this.label1.TabIndex = 0;
-            this.label1.Text = "A game made with advanced c sharp techniques for a computer sccience assesment.\r\n" +
-    "This game is for fun and for school intended for a school audience with some \r\nc" +
-    "ypepunk elements.\r\n";
+            this.label1.Text = resources.GetString("label1.Text");
             // 
             // Form3
             // 

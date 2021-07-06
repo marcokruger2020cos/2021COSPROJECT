@@ -120,16 +120,16 @@ namespace _2021COSPROJECT
                     {
                         
                         p.y = -100;// relocate planet to the top of the form
-                        missiles.Remove(m);
-                        Score++;
+                        missiles.Remove(m);//Remove the missle
+                        Score++;//Add score +1
                         lblScore.Text = "Score" + Score;
                         break;
                     }
                     if (pictureBox1.Bounds.IntersectsWith(p.enemyRec))
                     {
-                        Health--;
-                        lblHealth.Text = "Health" + Health;
-                       
+                        Health--;//Health minus
+                        lblHealth.Text = "Health" + Health;//-Health 
+                        break;
                     }
 
                    
@@ -211,8 +211,9 @@ namespace _2021COSPROJECT
                 p.moveenemy(g);//move the enemy
                  if (p.y >= ClientSize.Height)
                  {
-                p.y = -15;
+                  p.y = -15;//This moves the planet to the side to make it so that there is multiple planets
                  }
+
            }
           
            

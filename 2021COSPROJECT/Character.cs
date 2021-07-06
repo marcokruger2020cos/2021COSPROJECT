@@ -30,7 +30,7 @@ namespace _2021COSPROJECT
         public void drawcharacter(Graphics g)
         {
             
-            g.DrawImage(character, characterrec);
+            g.DrawImage(character, characterrec);//This image gets drawn
             
         }
 
