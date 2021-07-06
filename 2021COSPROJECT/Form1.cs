@@ -195,7 +195,8 @@ namespace _2021COSPROJECT
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-
+            e.Graphics.SmoothingMode =
+            System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             //get the graphics used to paint on the Form control
             g = e.Graphics;
             //Draw the spaceship
