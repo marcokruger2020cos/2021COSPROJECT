@@ -1,10 +1,4 @@
-﻿using System.Drawing.Drawing2D;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 
 
 
@@ -29,9 +23,9 @@ namespace _2021COSPROJECT
 
         public void drawcharacter(Graphics g)
         {
-            
+
             g.DrawImage(character, characterrec);//This image gets drawn
-            
+
         }
 
         public void movecharacter(int mouseX)

@@ -1,19 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D;
 
 namespace _2021COSPROJECT
 {
     public partial class Form1 : Form
     {
-        
+
         Graphics g; //declare a graphics object called g so we can draw on the Form
         Character character = new Character(); //create an instance of the Character Class called spaceship
         bool turnLeft, turnRight;//Not being used for now
@@ -26,8 +20,8 @@ namespace _2021COSPROJECT
 
         public Form1()
         {
-            
-            
+
+
             InitializeComponent();
             for (int i = 0; i < 7; i++)
             {
@@ -41,7 +35,7 @@ namespace _2021COSPROJECT
 
         }
 
-       
+
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -49,8 +43,8 @@ namespace _2021COSPROJECT
             this.Invalidate();
         }
 
-       
-        
+
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();          //Close game when exit is clicked
@@ -58,12 +52,12 @@ namespace _2021COSPROJECT
 
         private void Explosive1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Be carefull not to shoot the barels " );
+            MessageBox.Show("Be carefull not to shoot the barels ");
         }
 
         private void pauseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          tmrCharacter.Stop();//Pause button
+            tmrCharacter.Stop();//Pause button
         }
 
         private void playToolStripMenuItem_Click(object sender, EventArgs e)
@@ -97,7 +91,7 @@ namespace _2021COSPROJECT
             if (e.Button == MouseButtons.Left)
             {
                 missiles.Add(new Missile(character.characterrec));
-              
+
             }
 
 
@@ -108,7 +102,7 @@ namespace _2021COSPROJECT
 
         private void tmrShoot_Tick(object sender, EventArgs e)
         {
-           
+
 
 
             foreach (Enemy p in enemies)
@@ -118,7 +112,7 @@ namespace _2021COSPROJECT
                 {
                     if (p.enemyRec.IntersectsWith(m.missileRec))
                     {
-                        
+
                         p.y = -100;// relocate planet to the top of the form
                         missiles.Remove(m);//Remove the missle
                         Score++;//Add score +1
@@ -132,10 +126,10 @@ namespace _2021COSPROJECT
                         break;
                     }
 
-                   
+
 
                 }
-              
+
             }
 
 
@@ -169,7 +163,7 @@ namespace _2021COSPROJECT
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void tmrCharacter_Tick(object sender, EventArgs e)
@@ -206,18 +200,18 @@ namespace _2021COSPROJECT
                 m.draw(g);
             }
 
-           foreach (Enemy p in enemies)
-           {
+            foreach (Enemy p in enemies)
+            {
                 p.draw(g);//Draw the enemy
                 p.moveenemy(g);//move the enemy
-                 if (p.y >= ClientSize.Height)
-                 {
-                  p.y = -15;//This moves the planet to the side to make it so that there is multiple planets
-                 }
+                if (p.y >= ClientSize.Height)
+                {
+                    p.y = -15;//This moves the planet to the side to make it so that there is multiple planets
+                }
 
-           }
-          
-           
+            }
+
+
 
 
 
