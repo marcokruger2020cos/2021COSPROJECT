@@ -24,5 +24,10 @@ namespace _2021COSPROJECT
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
