@@ -87,10 +87,10 @@ namespace _2021COSPROJECT
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(842, 25);
+            this.label4.Size = new System.Drawing.Size(864, 25);
             this.label4.TabIndex = 4;
-            this.label4.Text = "This game where you fight to survive, kill as many enemies as possible to remain " +
-    "alive.";
+            this.label4.Text = "This is game where you fight to survive, kill as many enemies as possible to rema" +
+    "in alive.";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label6
