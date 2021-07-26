@@ -106,11 +106,12 @@ namespace _2021COSPROJECT
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(779, 415);
+            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(767, 428);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(87, 23);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Exit";
+            this.button1.Text = "Exit everything\r\n";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -118,7 +119,7 @@ namespace _2021COSPROJECT
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(394, 425);
+            this.label7.Location = new System.Drawing.Point(410, 430);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 19);
             this.label7.TabIndex = 8;
@@ -128,7 +129,7 @@ namespace _2021COSPROJECT
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(17, 430);
+            this.label8.Location = new System.Drawing.Point(13, 430);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(124, 19);
             this.label8.TabIndex = 9;
