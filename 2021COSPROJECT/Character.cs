@@ -30,7 +30,7 @@ namespace _2021COSPROJECT
 
         public void movecharacter(int mouseX)
         {
-            characterrec.X = mouseX - (characterrec.Width / 2);
+            characterrec.X = mouseX - (characterrec.Width / 2); //Move with the mouse
         }
 
     }

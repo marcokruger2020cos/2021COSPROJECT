@@ -17,7 +17,7 @@ namespace _2021COSPROJECT
         public Missile(Rectangle spaceRec)
         {
             x = spaceRec.X + 37; // move missile to middle of character
-            y = spaceRec.Y;
+            y = spaceRec.Y;      // This is motion
             width = 15;
             height = 15;
             missile = Image.FromFile("pixil-frame-0 (1).png");

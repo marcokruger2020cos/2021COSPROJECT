@@ -13,8 +13,8 @@ namespace _2021COSPROJECT
         {
             x = displacement;
             y = 5;
-            width = 35;
-            height = 35;
+            width = 35;//This size may change depending on how fast the firing solution works.
+            height = 35; 
             enemyImage = Properties.Resources.enemy1;
             enemyRec = new Rectangle(x, y, width, height);
         }
