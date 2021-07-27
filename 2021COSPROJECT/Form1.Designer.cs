@@ -51,6 +51,10 @@ namespace _2021COSPROJECT
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.explosive1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Name = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblOutput = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Reactor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -156,7 +160,7 @@ namespace _2021COSPROJECT
             this.lblScore.AutoSize = true;
             this.lblScore.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblScore.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScore.Location = new System.Drawing.Point(243, 0);
+            this.lblScore.Location = new System.Drawing.Point(299, 0);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(65, 23);
             this.lblScore.TabIndex = 3;
@@ -167,7 +171,7 @@ namespace _2021COSPROJECT
             this.lblHealth.AutoSize = true;
             this.lblHealth.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblHealth.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHealth.Location = new System.Drawing.Point(314, 0);
+            this.lblHealth.Location = new System.Drawing.Point(360, 0);
             this.lblHealth.Name = "lblHealth";
             this.lblHealth.Size = new System.Drawing.Size(107, 23);
             this.lblHealth.TabIndex = 4;
@@ -216,6 +220,49 @@ namespace _2021COSPROJECT
             this.label1.TabIndex = 6;
             this.label1.Text = "Protect the reactor! That\'s a order private!";
             // 
+            // Name
+            // 
+            this.Name.Location = new System.Drawing.Point(179, 56);
+            this.Name.Name = "Name";
+            this.Name.Size = new System.Drawing.Size(84, 20);
+            this.Name.TabIndex = 7;
+            this.Name.TextChanged += new System.EventHandler(this.Name_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(24, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Please enter name";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(270, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Enter";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblOutput
+            // 
+            this.lblOutput.AutoSize = true;
+            this.lblOutput.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblOutput.Font = new System.Drawing.Font("Segoe Script", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOutput.Location = new System.Drawing.Point(228, 4);
+            this.lblOutput.Name = "lblOutput";
+            this.lblOutput.Size = new System.Drawing.Size(0, 19);
+            this.lblOutput.TabIndex = 10;
+            this.lblOutput.Click += new System.EventHandler(this.label3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,6 +271,10 @@ namespace _2021COSPROJECT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(467, 561);
+            this.Controls.Add(this.lblOutput);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Name);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Reactor);
             this.Controls.Add(this.lblHealth);
@@ -274,6 +325,10 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.Label lblHealth;
         private System.Windows.Forms.PictureBox Reactor;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Name;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblOutput;
     }
 }
 

@@ -188,6 +188,22 @@ namespace _2021COSPROJECT
             this.Hide();
         }
 
+        private void Name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string f = Name.Text;
+            lblOutput.Text = f;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.SmoothingMode =
