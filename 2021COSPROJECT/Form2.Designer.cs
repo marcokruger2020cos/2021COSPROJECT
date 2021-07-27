@@ -54,10 +54,10 @@ namespace _2021COSPROJECT
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(107, 115);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(395, 25);
+            this.label1.Size = new System.Drawing.Size(344, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Use your mouse to direct your character";
             // 
@@ -84,13 +84,13 @@ namespace _2021COSPROJECT
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 9);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(181, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(864, 25);
+            this.label4.Size = new System.Drawing.Size(535, 50);
             this.label4.TabIndex = 4;
-            this.label4.Text = "This is game where you fight to survive, kill as many enemies as possible to rema" +
-    "in alive.";
+            this.label4.Text = "This is game where you fight to survive,\r\n kill as many enemies as possible to re" +
+    "main alive.";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label6
@@ -106,10 +106,10 @@ namespace _2021COSPROJECT
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(767, 428);
+            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(754, 399);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 23);
+            this.button1.Size = new System.Drawing.Size(112, 51);
             this.button1.TabIndex = 7;
             this.button1.Text = "Exit everything\r\n";
             this.button1.UseVisualStyleBackColor = true;
@@ -118,20 +118,20 @@ namespace _2021COSPROJECT
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(410, 430);
+            this.label7.Font = new System.Drawing.Font("Mistral", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(409, 424);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 19);
+            this.label7.Size = new System.Drawing.Size(53, 26);
             this.label7.TabIndex = 8;
             this.label7.Text = "Enjoy";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Mistral", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(13, 430);
+            this.label8.Font = new System.Drawing.Font("Mistral", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 424);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(124, 19);
+            this.label8.Size = new System.Drawing.Size(159, 26);
             this.label8.TabIndex = 9;
             this.label8.Text = "Made by Marco Kruger";
             // 

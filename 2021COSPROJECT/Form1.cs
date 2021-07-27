@@ -164,7 +164,7 @@ namespace _2021COSPROJECT
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("This is the city reator protect it from the invaders");
         }
 
         private void tmrCharacter_Tick(object sender, EventArgs e)

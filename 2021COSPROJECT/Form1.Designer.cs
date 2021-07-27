@@ -146,6 +146,11 @@ namespace _2021COSPROJECT
             this.tmrStop.Interval = 1;
             this.tmrStop.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1;
+            // 
             // lblScore
             // 
             this.lblScore.AutoSize = true;
