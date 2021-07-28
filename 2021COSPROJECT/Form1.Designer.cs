@@ -51,10 +51,11 @@ namespace _2021COSPROJECT
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.explosive1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblOutput = new System.Windows.Forms.Label();
+            this.textNM = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Reactor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -220,14 +221,6 @@ namespace _2021COSPROJECT
             this.label1.TabIndex = 6;
             this.label1.Text = "Protect the reactor! That\'s a order private!";
             // 
-            // Name
-            // 
-            this.Name.Location = new System.Drawing.Point(179, 56);
-            this.Name.Name = "Name";
-            this.Name.Size = new System.Drawing.Size(84, 20);
-            this.Name.TabIndex = 7;
-            this.Name.TextChanged += new System.EventHandler(this.Name_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -263,6 +256,26 @@ namespace _2021COSPROJECT
             this.lblOutput.TabIndex = 10;
             this.lblOutput.Click += new System.EventHandler(this.label3_Click);
             // 
+            // textNM
+            // 
+            this.textNM.Location = new System.Drawing.Point(164, 55);
+            this.textNM.Name = "textNM";
+            this.textNM.Size = new System.Drawing.Size(100, 20);
+            this.textNM.TabIndex = 11;
+            this.textNM.TextChanged += new System.EventHandler(this.textNM_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(120, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(253, 15);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Hint:Game only starts when first bullet is fired.";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,10 +284,11 @@ namespace _2021COSPROJECT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(467, 561);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textNM);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Name);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Reactor);
             this.Controls.Add(this.lblHealth);
@@ -325,10 +339,12 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.Label lblHealth;
         private System.Windows.Forms.PictureBox Reactor;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Name;
+       // private System.Windows.Forms.TextBox Name;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblOutput;
+        private System.Windows.Forms.TextBox textNM;
+        private System.Windows.Forms.Label label3;
     }
 }
 

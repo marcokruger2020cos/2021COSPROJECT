@@ -16,6 +16,7 @@ namespace _2021COSPROJECT
         List<Missile> missiles = new List<Missile>();
         List<Enemy> enemies = new List<Enemy>();
         List<Character> characters = new List<Character>();
+        
         int Score = 0;
         int Health = 10000;
 
@@ -195,11 +196,16 @@ namespace _2021COSPROJECT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string f = Name.Text;
+            string f = textNM.Text;
             lblOutput.Text = f;
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textNM_TextChanged(object sender, EventArgs e)
         {
 
         }
