@@ -10,7 +10,6 @@ namespace _2021COSPROJECT
 
         Graphics g; //declare a graphics object called g so we can draw on the Form
         Character character = new Character(); //create an instance of the Character Class called spaceship
-        bool turnLeft, turnRight;//Not being used for now
         //declare a list  missiles from the Missile class
         List<Missile> missiles = new List<Missile>();
         List<Enemy> enemies = new List<Enemy>();
@@ -28,6 +27,7 @@ namespace _2021COSPROJECT
             {
                 int displacement = 9 + (i * 70);
                 enemies.Add(new Enemy(displacement));
+                Random yspeed = new Random();
             }
         }
 
@@ -73,19 +73,7 @@ namespace _2021COSPROJECT
             this.Hide();
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Left) { turnLeft = true; }
-            if (e.KeyData == Keys.Right) { turnRight = true; }
-
-        }
-
-        private void Form1_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Left) { turnLeft = false; }
-            if (e.KeyData == Keys.Right) { turnRight = false; }
-
-        }
+     
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -159,7 +147,7 @@ namespace _2021COSPROJECT
 
         private void lbHealth_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("This is the reactor integrity");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -199,16 +187,6 @@ namespace _2021COSPROJECT
             lblOutput.Text = f;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textNM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.SmoothingMode =
@@ -221,6 +199,7 @@ namespace _2021COSPROJECT
             {
                 m.draw(g);
             }
+           
 
             foreach (Enemy p in enemies)
             {

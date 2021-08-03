@@ -254,7 +254,7 @@ namespace _2021COSPROJECT
             this.lblOutput.Name = "lblOutput";
             this.lblOutput.Size = new System.Drawing.Size(0, 19);
             this.lblOutput.TabIndex = 10;
-            this.lblOutput.Click += new System.EventHandler(this.label3_Click);
+     
             // 
             // textNM
             // 
@@ -262,7 +262,7 @@ namespace _2021COSPROJECT
             this.textNM.Name = "textNM";
             this.textNM.Size = new System.Drawing.Size(100, 20);
             this.textNM.TabIndex = 11;
-            this.textNM.TextChanged += new System.EventHandler(this.textNM_TextChanged);
+         
             // 
             // label3
             // 
@@ -303,8 +303,6 @@ namespace _2021COSPROJECT
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.menuStrip1.ResumeLayout(false);

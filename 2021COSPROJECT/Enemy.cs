@@ -28,6 +28,7 @@ namespace _2021COSPROJECT
         }
         public void moveenemy(Graphics g)
         {
+         
             y += 2;
             enemyRec.Location = new Point(x, y);
 
