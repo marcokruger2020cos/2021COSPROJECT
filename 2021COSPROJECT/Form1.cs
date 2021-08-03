@@ -53,7 +53,7 @@ namespace _2021COSPROJECT
 
         private void Explosive1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Be carefull not to shoot the barels ");
+            MessageBox.Show("Be carefull not to shoot the barels ");//This warns you
         }
 
         private void pauseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,7 +68,7 @@ namespace _2021COSPROJECT
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
+            Form2 frm = new Form2(); //Just move from main game form to Help Form
             frm.Show();
             this.Hide();
         }
@@ -82,18 +82,10 @@ namespace _2021COSPROJECT
                 missiles.Add(new Missile(character.characterrec));
 
             }
-
-
-
-
-
         }
 
         private void tmrShoot_Tick(object sender, EventArgs e)
         {
-
-
-
             foreach (Enemy p in enemies)
             {
 
