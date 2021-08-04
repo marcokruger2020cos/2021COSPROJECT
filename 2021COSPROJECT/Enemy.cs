@@ -30,7 +30,7 @@ namespace _2021COSPROJECT
         public void Moveenemy(Graphics g)
         {
          
-            y += 2;
+            y += 2; //Move the enemy down
             enemyRec.Location = new Point(x, y);
 
         }

@@ -13,7 +13,7 @@ namespace _2021COSPROJECT
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            Environment.Exit(1);
+            Environment.Exit(1);//Exit afeter viewing
 
         }
 

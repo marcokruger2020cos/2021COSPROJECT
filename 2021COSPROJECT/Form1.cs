@@ -79,7 +79,7 @@ namespace _2021COSPROJECT
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            if (e.Button == MouseButtons.Left)//This fires the missle
             {
                 missiles.Add(new Missile(character.characterrec));
 
@@ -93,7 +93,7 @@ namespace _2021COSPROJECT
 
                 foreach (Missile m in missiles)
                 {
-                    if (p.enemyRec.IntersectsWith(m.missileRec))
+                    if (p.enemyRec.IntersectsWith(m.missileRec))//Not only does this  draw the majority of stuff it also calculate the score as well as the intersect.
                     {
 
                         p.y = -100;// relocate planet to the top of the form
@@ -141,7 +141,7 @@ namespace _2021COSPROJECT
 
         private void lbHealth_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This is the reactor integrity");
+            MessageBox.Show("This is the reactor integrity");//Message
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -177,7 +177,7 @@ namespace _2021COSPROJECT
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string f = textNM.Text;
+            string f = textNM.Text;//Outputs the text in textbox to a label.
             lblOutput.Text = f;
         }
 
