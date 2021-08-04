@@ -28,6 +28,8 @@ namespace _2021COSPROJECT
                 int displacement = 9 + (i * 70);
                 enemies.Add(new Enemy(displacement));
                 Random yspeed = new Random();
+                int rndmspeed = yspeed.Next(5, 20);
+               // Enemy [i] += rndmspeed; There has to be a way to implement this!
             }
         }
 
@@ -40,13 +42,13 @@ namespace _2021COSPROJECT
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            character.movecharacter(e.X);
+            character.Movecharacter(e.X);
             this.Invalidate();
         }
 
 
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();          //Close game when exit is clicked
         }
@@ -125,7 +127,7 @@ namespace _2021COSPROJECT
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (Score > 54)
+            if (Score > 54) //At this score you win and it opens the you win form.
             {
                 tmrStop.Stop();
                 tmrCharacter.Stop();
@@ -195,8 +197,8 @@ namespace _2021COSPROJECT
 
             foreach (Enemy p in enemies)
             {
-                p.draw(g);//Draw the enemy
-                p.moveenemy(g);//move the enemy
+                p.Draw(g);//Draw the enemy
+                p.Moveenemy(g);//move the enemy
                 if (p.y >= ClientSize.Height)
                 {
                     p.y = -15;//This moves the planet to the side to make it so that there is multiple planets

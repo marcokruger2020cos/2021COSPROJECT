@@ -20,13 +20,14 @@ namespace _2021COSPROJECT
         }
 
         // Methods for the Planet class
-        public void draw(Graphics g)
+        public void Draw(Graphics g)
         {
             enemyRec = new Rectangle(x, y, width, height);
+           
 
             g.DrawImage(enemyImage, enemyRec);
         }
-        public void moveenemy(Graphics g)
+        public void Moveenemy(Graphics g)
         {
          
             y += 2;

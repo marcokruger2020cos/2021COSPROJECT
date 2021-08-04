@@ -92,7 +92,7 @@ namespace _2021COSPROJECT
             this.label4.TabIndex = 4;
             this.label4.Text = "This is game where you fight to survive,\r\n kill as many enemies as possible to re" +
     "main alive.";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+           
             // 
             // label6
             // 
