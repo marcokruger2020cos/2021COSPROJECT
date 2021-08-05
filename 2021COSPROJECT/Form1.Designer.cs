@@ -56,6 +56,7 @@ namespace _2021COSPROJECT
             this.lblOutput = new System.Windows.Forms.Label();
             this.textNM = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.highScoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Reactor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,7 +88,8 @@ namespace _2021COSPROJECT
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem,
             this.loadToolStripMenuItem,
-            this.newToolStripMenuItem});
+            this.newToolStripMenuItem,
+            this.highScoresToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -95,20 +97,20 @@ namespace _2021COSPROJECT
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
             // aboutToolStripMenuItem
@@ -275,6 +277,13 @@ namespace _2021COSPROJECT
             this.label3.TabIndex = 12;
             this.label3.Text = "Hint:Game only starts when first bullet is fired.";
             // 
+            // highScoresToolStripMenuItem
+            // 
+            this.highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
+            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.highScoresToolStripMenuItem.Text = "High Scores";
+            this.highScoresToolStripMenuItem.Click += new System.EventHandler(this.highScoresToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,6 +351,7 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.Label lblOutput;
         private System.Windows.Forms.TextBox textNM;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem highScoresToolStripMenuItem;
     }
 }
 
