@@ -19,10 +19,8 @@ namespace _2021COSPROJECT
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            // get name and score from frmGame and show in lblPlayerName and lblPlayerScore         
-            label3.Text = name;
-            label4.Text = score;
-
+           // string f = textNM.Text;//Outputs the text in textbox to a label.
+           // lblOutput.Text = f;
         }
 
         private void label3_Click(object sender, EventArgs e)

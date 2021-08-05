@@ -37,10 +37,12 @@ namespace _2021COSPROJECT
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.highScoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pauseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tmrShoot = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tmrStop = new System.Windows.Forms.Timer(this.components);
@@ -56,7 +58,6 @@ namespace _2021COSPROJECT
             this.lblOutput = new System.Windows.Forms.Label();
             this.textNM = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.highScoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Reactor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,7 +77,8 @@ namespace _2021COSPROJECT
             this.aboutToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.pauseToolStripMenuItem,
-            this.playToolStripMenuItem});
+            this.playToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(467, 24);
@@ -113,6 +115,13 @@ namespace _2021COSPROJECT
             this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
+            // highScoresToolStripMenuItem
+            // 
+            this.highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
+            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.highScoresToolStripMenuItem.Text = "High Scores";
+            this.highScoresToolStripMenuItem.Click += new System.EventHandler(this.highScoresToolStripMenuItem_Click);
+            // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
@@ -140,6 +149,11 @@ namespace _2021COSPROJECT
             this.playToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.playToolStripMenuItem.Text = "Play";
             this.playToolStripMenuItem.Click += new System.EventHandler(this.playToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 20);
             // 
             // tmrShoot
             // 
@@ -277,13 +291,6 @@ namespace _2021COSPROJECT
             this.label3.TabIndex = 12;
             this.label3.Text = "Hint:Game only starts when first bullet is fired.";
             // 
-            // highScoresToolStripMenuItem
-            // 
-            this.highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
-            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.highScoresToolStripMenuItem.Text = "High Scores";
-            this.highScoresToolStripMenuItem.Click += new System.EventHandler(this.highScoresToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -352,6 +359,7 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.TextBox textNM;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem highScoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 
