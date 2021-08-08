@@ -165,7 +165,7 @@ namespace _2021COSPROJECT
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 frm = new Form3();
+            Form3 frm = new Form3(); //Links to the about menu and info
             frm.Show();
             this.Hide();
         }
@@ -219,7 +219,7 @@ namespace _2021COSPROJECT
 
         private void highScoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form5 frm = new Form5();
+            Form5 frm = new Form5();//Shows the scores from the high scores board
             frm.Show();
             this.Hide();
         }

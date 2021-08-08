@@ -27,8 +27,8 @@ namespace _2021COSPROJECT
         public void draw(Graphics g)
         {
             y -= 38;//speed of bullet
-            missileRec = new Rectangle(x, y, width, height);
-            g.DrawImage(missile, missileRec);
+            missileRec = new Rectangle(x, y, width, height);//What is to be used
+            g.DrawImage(missile, missileRec);//It gets drawn
 
 
         }

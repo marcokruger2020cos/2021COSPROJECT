@@ -81,7 +81,7 @@ namespace _2021COSPROJECT
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(467, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(466, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,26 +99,26 @@ namespace _2021COSPROJECT
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.loadToolStripMenuItem.Text = "Load";
             // 
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
             // highScoresToolStripMenuItem
             // 
             this.highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
-            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.highScoresToolStripMenuItem.Text = "High Scores";
             this.highScoresToolStripMenuItem.Click += new System.EventHandler(this.highScoresToolStripMenuItem_Click);
             // 
@@ -199,7 +199,7 @@ namespace _2021COSPROJECT
             // 
             this.Reactor.BackColor = System.Drawing.Color.Red;
             this.Reactor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Reactor.BackgroundImage")));
-            this.Reactor.Location = new System.Drawing.Point(223, 539);
+            this.Reactor.Location = new System.Drawing.Point(164, 539);
             this.Reactor.Name = "Reactor";
             this.Reactor.Size = new System.Drawing.Size(40, 22);
             this.Reactor.TabIndex = 5;
@@ -209,7 +209,7 @@ namespace _2021COSPROJECT
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBox1.Location = new System.Drawing.Point(450, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(449, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(17, 26);
             this.pictureBox1.TabIndex = 2;
@@ -218,7 +218,7 @@ namespace _2021COSPROJECT
             // explosive1
             // 
             this.explosive1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.explosive1.Location = new System.Drawing.Point(0, 27);
+            this.explosive1.Location = new System.Drawing.Point(0, 26);
             this.explosive1.Name = "explosive1";
             this.explosive1.Size = new System.Drawing.Size(17, 26);
             this.explosive1.TabIndex = 1;
@@ -298,7 +298,7 @@ namespace _2021COSPROJECT
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(467, 561);
+            this.ClientSize = new System.Drawing.Size(466, 564);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textNM);
             this.Controls.Add(this.lblOutput);
