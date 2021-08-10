@@ -8,4 +8,5 @@ Requires a pc with visual studio.
 Aestetics edited and chosen by me the theme was cyperpunk.
 
 It has been play tested by multiple play testers as well as versioned with input from players.
-Feedback from players have been taken into account to improve player usability IE) making it easier to see text.
+Feedback from players have been taken into account to improve player usability IE) making it easier to see text. Making it harder to score.
+C2021 by Marco Kruger
