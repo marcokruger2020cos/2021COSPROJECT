@@ -12,20 +12,32 @@ namespace _2021COSPROJECT
 {
     public partial class Form5 : Form
     {
-        public Form5()
+        public Form5(string playerName, string playerScore)
         {
             InitializeComponent();
+            // get name and score from frmGame and show in lblPlayerName and lblPlayerScore         
+            lblplayername.Text = playerName;
+            lblplayerscore.Text = playerScore;
+
         }
 
         private void Form5_Load(object sender, EventArgs e)
         {
-           // string f = textNM.Text;//Outputs the text in textbox to a label.
-           // lblOutput.Text = f;
+           
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
+           
+        }
 
+        private void EXITbutton_Click(object sender, EventArgs e)
+        {
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i--)
+            {
+                if (Application.OpenForms[i].Name != "Menu")
+                    Application.OpenForms[i].Close();
+            }
         }
     }
 }

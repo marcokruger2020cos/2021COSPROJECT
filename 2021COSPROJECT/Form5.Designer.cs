@@ -31,6 +31,11 @@ namespace _2021COSPROJECT
         {
             this.EXITbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblplayername = new System.Windows.Forms.Label();
+            this.lblplayerscore = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // EXITbutton
@@ -42,17 +47,61 @@ namespace _2021COSPROJECT
             this.EXITbutton.TabIndex = 0;
             this.EXITbutton.Text = "Exit";
             this.EXITbutton.UseVisualStyleBackColor = true;
+            this.EXITbutton.Click += new System.EventHandler(this.EXITbutton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label1.Font = new System.Drawing.Font("Mistral", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(118, 133);
+            this.label1.Location = new System.Drawing.Point(118, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(547, 114);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Wait its all 65.";
+            this.label1.Text = "Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(300, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Score";
+            // 
+            // lblplayername
+            // 
+            this.lblplayername.AutoSize = true;
+            this.lblplayername.Location = new System.Drawing.Point(103, 268);
+            this.lblplayername.Name = "lblplayername";
+            this.lblplayername.Size = new System.Drawing.Size(72, 13);
+            this.lblplayername.TabIndex = 3;
+            this.lblplayername.Text = "Players Name";
+            // 
+            // lblplayerscore
+            // 
+            this.lblplayerscore.AutoSize = true;
+            this.lblplayerscore.Location = new System.Drawing.Point(103, 300);
+            this.lblplayerscore.Name = "lblplayerscore";
+            this.lblplayerscore.Size = new System.Drawing.Size(72, 13);
+            this.lblplayerscore.TabIndex = 4;
+            this.lblplayerscore.Text = "Players Score";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(194, 268);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Name";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(194, 300);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Score";
             // 
             // Form5
             // 
@@ -60,6 +109,11 @@ namespace _2021COSPROJECT
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblplayerscore);
+            this.Controls.Add(this.lblplayername);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EXITbutton);
             this.Name = "Form5";
@@ -74,5 +128,10 @@ namespace _2021COSPROJECT
 
         private System.Windows.Forms.Button EXITbutton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblplayername;
+        private System.Windows.Forms.Label lblplayerscore;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

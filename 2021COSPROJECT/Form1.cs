@@ -170,16 +170,7 @@ namespace _2021COSPROJECT
             this.Hide();
         }
 
-        private void Name_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string f = textNM.Text;//Outputs the text in textbox to a label.
-            lblOutput.Text = f;
-        }
+       
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
@@ -207,21 +198,16 @@ namespace _2021COSPROJECT
             }
 
 
-
-
-
-
-
-
-
-
         }
 
-        private void highScoresToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btncheck_Click(object sender, EventArgs e)
         {
-            Form5 frm = new Form5();//Shows the scores from the high scores board
-            frm.Show();
-            this.Hide();
+            FrmHighScores FrmHighScore2 = new FrmHighScores();
+            Hide();
+            FrmHighScore2.ShowDialog();
+
+
+
         }
     }
 }

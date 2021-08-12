@@ -54,10 +54,12 @@ namespace _2021COSPROJECT
             this.explosive1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btncheck = new System.Windows.Forms.Button();
             this.lblOutput = new System.Windows.Forms.Label();
-            this.textNM = new System.Windows.Forms.TextBox();
+            this.txtname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtscore = new System.Windows.Forms.TextBox();
+            this.lbliscore = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Reactor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -120,7 +122,6 @@ namespace _2021COSPROJECT
             this.highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
             this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.highScoresToolStripMenuItem.Text = "High Scores";
-            this.highScoresToolStripMenuItem.Click += new System.EventHandler(this.highScoresToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -249,18 +250,18 @@ namespace _2021COSPROJECT
             this.label2.TabIndex = 8;
             this.label2.Text = "Please enter name";
             // 
-            // button1
+            // btncheck
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(270, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Enter";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btncheck.BackColor = System.Drawing.Color.Transparent;
+            this.btncheck.Font = new System.Drawing.Font("MV Boli", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncheck.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btncheck.Location = new System.Drawing.Point(270, 52);
+            this.btncheck.Name = "btncheck";
+            this.btncheck.Size = new System.Drawing.Size(75, 23);
+            this.btncheck.TabIndex = 9;
+            this.btncheck.Text = "Enter";
+            this.btncheck.UseVisualStyleBackColor = false;
+            this.btncheck.Click += new System.EventHandler(this.btncheck_Click);
             // 
             // lblOutput
             // 
@@ -272,12 +273,12 @@ namespace _2021COSPROJECT
             this.lblOutput.Size = new System.Drawing.Size(0, 19);
             this.lblOutput.TabIndex = 10;
             // 
-            // textNM
+            // txtname
             // 
-            this.textNM.Location = new System.Drawing.Point(164, 55);
-            this.textNM.Name = "textNM";
-            this.textNM.Size = new System.Drawing.Size(100, 20);
-            this.textNM.TabIndex = 11;
+            this.txtname.Location = new System.Drawing.Point(164, 55);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(100, 20);
+            this.txtname.TabIndex = 11;
             // 
             // label3
             // 
@@ -285,11 +286,30 @@ namespace _2021COSPROJECT
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(120, 78);
+            this.label3.Location = new System.Drawing.Point(11, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(253, 15);
             this.label3.TabIndex = 12;
             this.label3.Text = "Hint:Game only starts when first bullet is fired.";
+            // 
+            // txtscore
+            // 
+            this.txtscore.Location = new System.Drawing.Point(164, 82);
+            this.txtscore.Name = "txtscore";
+            this.txtscore.Size = new System.Drawing.Size(100, 20);
+            this.txtscore.TabIndex = 13;
+            // 
+            // lbliscore
+            // 
+            this.lbliscore.AutoSize = true;
+            this.lbliscore.BackColor = System.Drawing.Color.Transparent;
+            this.lbliscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbliscore.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbliscore.Location = new System.Drawing.Point(20, 82);
+            this.lbliscore.Name = "lbliscore";
+            this.lbliscore.Size = new System.Drawing.Size(91, 20);
+            this.lbliscore.TabIndex = 14;
+            this.lbliscore.Text = "Enter score";
             // 
             // Form1
             // 
@@ -299,10 +319,12 @@ namespace _2021COSPROJECT
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(466, 564);
+            this.Controls.Add(this.lbliscore);
+            this.Controls.Add(this.txtscore);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textNM);
+            this.Controls.Add(this.txtname);
             this.Controls.Add(this.lblOutput);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btncheck);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Reactor);
@@ -354,12 +376,14 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.Label label1;
        // private System.Windows.Forms.TextBox Name;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btncheck;
         private System.Windows.Forms.Label lblOutput;
-        private System.Windows.Forms.TextBox textNM;
+        private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem highScoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.TextBox txtscore;
+        private System.Windows.Forms.Label lbliscore;
     }
 }
 
