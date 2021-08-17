@@ -22,17 +22,5 @@ namespace _2021COSPROJECT.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public string lbnscore {
-            get {
-                return ((string)(this["lbnscore"]));
-            }
-            set {
-                this["lbnscore"] = value;
-            }
-        }
     }
 }

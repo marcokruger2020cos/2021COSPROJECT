@@ -202,7 +202,7 @@ namespace _2021COSPROJECT
 
         private void btncheck_Click(object sender, EventArgs e)
         {
-            FrmHighScores FrmHighScore2 = new FrmHighScores();
+            Form5 FrmHighScore2 = new Form5(TXTname.Text,TXTScore.Text);
             Hide();
             FrmHighScore2.ShowDialog();
 

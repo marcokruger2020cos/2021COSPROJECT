@@ -36,6 +36,8 @@ namespace _2021COSPROJECT
             this.lblplayerscore = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.listBoxName = new System.Windows.Forms.ListBox();
+            this.listBoxScore = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // EXITbutton
@@ -103,12 +105,31 @@ namespace _2021COSPROJECT
             this.label6.TabIndex = 6;
             this.label6.Text = "Score";
             // 
+            // listBoxName
+            // 
+            this.listBoxName.FormattingEnabled = true;
+            this.listBoxName.Location = new System.Drawing.Point(121, 78);
+            this.listBoxName.Name = "listBoxName";
+            this.listBoxName.Size = new System.Drawing.Size(120, 95);
+            this.listBoxName.TabIndex = 7;
+            // 
+            // listBoxScore
+            // 
+            this.listBoxScore.FormattingEnabled = true;
+            this.listBoxScore.Location = new System.Drawing.Point(300, 78);
+            this.listBoxScore.Name = "listBoxScore";
+            this.listBoxScore.Size = new System.Drawing.Size(120, 95);
+            this.listBoxScore.TabIndex = 8;
+            this.listBoxScore.SelectedIndexChanged += new System.EventHandler(this.listBoxScore_SelectedIndexChanged);
+            // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBoxScore);
+            this.Controls.Add(this.listBoxName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblplayerscore);
@@ -133,5 +154,7 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.Label lblplayerscore;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListBox listBoxName;
+        private System.Windows.Forms.ListBox listBoxScore;
     }
 }

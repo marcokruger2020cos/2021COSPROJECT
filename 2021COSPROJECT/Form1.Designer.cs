@@ -56,9 +56,9 @@ namespace _2021COSPROJECT
             this.label2 = new System.Windows.Forms.Label();
             this.btncheck = new System.Windows.Forms.Button();
             this.lblOutput = new System.Windows.Forms.Label();
-            this.txtname = new System.Windows.Forms.TextBox();
+            this.TXTname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtscore = new System.Windows.Forms.TextBox();
+            this.TXTScore = new System.Windows.Forms.TextBox();
             this.lbliscore = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Reactor)).BeginInit();
@@ -273,12 +273,12 @@ namespace _2021COSPROJECT
             this.lblOutput.Size = new System.Drawing.Size(0, 19);
             this.lblOutput.TabIndex = 10;
             // 
-            // txtname
+            // TXTname
             // 
-            this.txtname.Location = new System.Drawing.Point(164, 55);
-            this.txtname.Name = "txtname";
-            this.txtname.Size = new System.Drawing.Size(100, 20);
-            this.txtname.TabIndex = 11;
+            this.TXTname.Location = new System.Drawing.Point(164, 55);
+            this.TXTname.Name = "TXTname";
+            this.TXTname.Size = new System.Drawing.Size(100, 20);
+            this.TXTname.TabIndex = 11;
             // 
             // label3
             // 
@@ -292,12 +292,12 @@ namespace _2021COSPROJECT
             this.label3.TabIndex = 12;
             this.label3.Text = "Hint:Game only starts when first bullet is fired.";
             // 
-            // txtscore
+            // TXTScore
             // 
-            this.txtscore.Location = new System.Drawing.Point(164, 82);
-            this.txtscore.Name = "txtscore";
-            this.txtscore.Size = new System.Drawing.Size(100, 20);
-            this.txtscore.TabIndex = 13;
+            this.TXTScore.Location = new System.Drawing.Point(164, 82);
+            this.TXTScore.Name = "TXTScore";
+            this.TXTScore.Size = new System.Drawing.Size(100, 20);
+            this.TXTScore.TabIndex = 13;
             // 
             // lbliscore
             // 
@@ -320,9 +320,9 @@ namespace _2021COSPROJECT
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(466, 564);
             this.Controls.Add(this.lbliscore);
-            this.Controls.Add(this.txtscore);
+            this.Controls.Add(this.TXTScore);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtname);
+            this.Controls.Add(this.TXTname);
             this.Controls.Add(this.lblOutput);
             this.Controls.Add(this.btncheck);
             this.Controls.Add(this.label2);
@@ -378,11 +378,11 @@ namespace _2021COSPROJECT
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btncheck;
         private System.Windows.Forms.Label lblOutput;
-        private System.Windows.Forms.TextBox txtname;
+        private System.Windows.Forms.TextBox TXTname;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ToolStripMenuItem highScoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.TextBox txtscore;
+        private System.Windows.Forms.TextBox TXTScore;
         private System.Windows.Forms.Label lbliscore;
     }
 }

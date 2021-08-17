@@ -76,6 +76,7 @@
     <Compile Include="Form5.Designer.cs">
       <DependentUpon>Form5.cs</DependentUpon>
     </Compile>
+    <Compile Include="HighScores.cs" />
     <Compile Include="Missile.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Program.cs" />
